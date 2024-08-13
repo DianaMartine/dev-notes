@@ -1,0 +1,89 @@
+{
+    "topics": [
+        {
+            "title": "HTML5",
+            "subtitle": "HyperText Markup Language",
+            "description": "HTML é a linguagem padrão para criar páginas da web.",
+            "icon": "https://img.shields.io/badge/-%23E34F2600.svg?style=for-the-badge&logo=html5&logoColor=23e34f26",
+            "slug": "html5",
+            "content": [
+                {
+                    "title": "HTML5 Introdução",
+                    "description": "HTML5 é a versão mais recente do HTML. Com novos elementos, atributos e comportamentos, é uma nova e melhorada versão do HTML.",
+                    "slug": "introducao",
+                    "content": [
+                        {
+                            "title": "História",
+                            "description": "HTML5 foi proposto pela primeira vez por Ian Hickson da Google em 2004. Em 2008, a W3C publicou a primeira versão do HTML5.",
+                            "slug": "historia"
+                        },
+                        {
+                            "title": "Por que HTML5?",
+                            "description": "HTML5 é projetado para tornar a criação de aplicativos web mais fácil e eficiente.",
+                            "slug": "por-que"
+                        },
+                        {
+                            "title": "Novidades",
+                            "description": "HTML5 introduziu muitos novos elementos que ajudam a criar páginas da web mais eficientes.",
+                            "slug": "novidades"
+                        },
+                        {
+                            "title": "Compatibilidade",
+                            "description": "HTML5 é compatível com todos os navegadores modernos.",
+                            "slug": "compatibilidade"
+                        },
+                        {
+                            "title": "Estrutura Básica",
+                            "description": "A estrutura básica de um documento HTML5 é composta por elementos HTML.",
+                            "slug": "estrutura"
+                        },
+                        {
+                            "title": "Elementos",
+                            "description": "Elementos HTML5 são usados para definir a estrutura de uma página da web.",
+                            "slug": "elementos"
+                        }
+                    ]
+                },
+                {
+                    "title": "HTML5 Tags",
+                    "description": "HTML5 tags são usadas para definir elementos HTML.",
+                    "slug": "tags",
+                    "content": [
+                        {
+                            "tag": "<!--...-->",
+                            "description": "Define um comentário no código HTML.",
+                            "example": "<!-- Este é um comentário -->",
+                            "slug": "comentario"
+                        },
+                        {
+                            "tag": "<a>",
+                            "description": "Define um hyperlink, que é usado para ligar de uma página para outra.",
+                            "example": "<a href='https://github.com/division-group'>Division Group</a>",
+                            "slug": "a"
+                        },
+                        {
+                            "tag": "<abbr>",
+                            "description": "Define uma abreviação ou acrônimo.",
+                            "example": "<abbr title='Division Group'>DG</abbr>",
+                            "slug": "abbr"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "CSS3",
+            "subtitle": "Cascading Style Sheets",
+            "description": "CSS is a language that describes the style of an HTML document.",
+            "icon": "https://img.shields.io/badge/-%231572B600.svg?style=for-the-badge&logo=css3&logoColor=1572b6",
+            "slug": "css3"
+        },
+        {
+            "title": "JavaScript",
+            "subtitle": "JS",
+            "description": "JavaScript is the programming language of HTML and the Web.",
+            "icon": "https://img.shields.io/badge/-%2332333000.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
+            "slug": "javascript"
+        }
+    ]
+}
