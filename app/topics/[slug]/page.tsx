@@ -1,17 +1,16 @@
-'use client'
-import {
-  useParams
-} from "next/navigation";
-import React, { useState } from "react";
-import type { TopicProps } from "../../shared/components/types";
-import { Heading } from "../../shared/components/typo/heading/heading";
-import { Paragraph } from "../../shared/components/typo/paragraph/paragraph";
-import data from "../../shared/data/data.json";
-import { ImageComponent } from "@/app/shared/components/image-component/image-component";
+'use client';
+import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
+import { TopicProps } from "@/app/shared/components/types";
+import { useParams } from "next/navigation";
+import { useState } from "react";
+import data from "@/app/shared/data/data.json";
+import { IonCaption } from "@/app/shared/components/typo/ion-caption/ion-caption";
+import { IonHeading } from "@/app/shared/components/typo/ion-heading/ion-heading";
+import { IonParagraph } from "@/app/shared/components/typo/ion-paragraph/ion-paragraph";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import Link from "next/link";
-import { Header } from "@/app/shared/components/header/header";
 
-export default function Topic() {
+export default function Topics() {
   const { slug } = useParams();
   const slugData = data.topics.find((topic) => topic.title.toLowerCase() === slug);
 
@@ -25,46 +24,73 @@ export default function Topic() {
   });
 
   return (
-    <>
-      <Header />
-      <div className="bg-[#202020] text-white flex flex-col p-2 gap-4">
-        <hr />
-
-        <div id="title" className="flex">
-          <Heading level={1}>
-            {currentTopic.topic.title}
-          </Heading>
-          <ImageComponent src={currentTopic.topic.icon} alt={currentTopic.topic.title} format="flat" size="small" />
-        </div>
-        <Paragraph size="medium">
+    <IonLayout>
+      <Breadcrumb className="
+            py-4
+            ">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/" className="
+            hover:text-[#922AC7]
+            ">
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <IonCaption size="small">
+              {currentTopic.topic.title}
+            </IonCaption>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <div className="
+            space-y-4
+            ">
+        <IonHeading level={1}>
+          {currentTopic.topic.title}
+        </IonHeading>
+        <IonParagraph size="medium">
           {currentTopic.topic.subtitle}
-        </Paragraph>
-        <Paragraph size="medium">
+        </IonParagraph>
+        <IonParagraph size="medium">
           {currentTopic.topic.description}
-        </Paragraph>
+        </IonParagraph>
         <hr />
 
-        <div id="content" className="flex flex-col gap-4">
-          <Heading level={2}>
-            Conteúdo:
-          </Heading>
-          <ul>
-            {slugData?.content?.map((item, index) => (
-              <Link href={`/topics/${slug}/${item.slug}`}
-               key={index}>
+        <IonHeading level={2}>
+          Conteúdo:
+        </IonHeading>
+        <ul className="
+                flex
+                flex-col
+                gap-4
+                list-disc
+                pl-4
+                ">
+          {slugData?.content?.map((item, index) => {
+            const {
+              title: itemTitle,
+              description: itemDescription,
+              slug: itemSlug,
+            } = item;
+            
+            return (
+              <Link href={`/topics/${slug}/${itemSlug}`}
+                key={index}>
                 <li key={index}>
-                  <Heading level={2}>
-                    {item.title}
-                  </Heading>
-                  <Paragraph size="small">
-                    {item.description}
-                  </Paragraph>
+                  <IonHeading level={2}>
+                    {itemTitle}
+                  </IonHeading>
+                  <IonParagraph size="small">
+                    {itemDescription}
+                  </IonParagraph>
                 </li>
               </Link>
-            ))}
-          </ul>
-        </div>
+            )
+          })}
+        </ul>
       </div>
-    </>
+    </IonLayout>
   );
 }

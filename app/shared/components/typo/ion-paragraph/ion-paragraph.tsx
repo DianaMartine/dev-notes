@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
-import type { ParagraphProps } from "../../types";
+import type { ParagraphProps } from "@/app/shared/components/types";
 import clsx from "clsx";
 
-export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
+export const IonParagraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
     ({ children, bgColor, textColor, size }, ref) => {
         return (
             <p

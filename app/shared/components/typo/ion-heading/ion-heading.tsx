@@ -2,9 +2,9 @@ import React, { forwardRef } from 'react';
 import type { HeadingProps } from '../../types';
 import clsx from 'clsx';
 
-export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
+export const IonHeading = forwardRef<HTMLHeadingElement, HeadingProps>(
     ({ children, bgColor, textColor, level }, _ref) => {
-        const Tag: keyof JSX.IntrinsicElements = `h${level}`;
+        const TagHeading: keyof JSX.IntrinsicElements = `h${level}`;
         const levelMap = {
             1: 'sm:text-5xl text-4xl',
             2: 'sm:text-4xl text-3xl',
@@ -14,7 +14,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
             6: 'sm:text-lg text-base',
         };
         return (
-            <Tag
+            <TagHeading
                 ref={_ref}
                 className={clsx(
                     'font-bold',
@@ -26,7 +26,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
                 }}
             >
                 {children}
-            </Tag>
+            </TagHeading>
         );
     }
 ) as React.ForwardRefExoticComponent<HeadingProps & React.RefAttributes<HTMLHeadingElement>>;

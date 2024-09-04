@@ -12,6 +12,22 @@ export type HeadingProps = GlobalProps & {
     level: 1 | 2 | 3 | 4 | 5 | 6;
 };
 
+export type CaptionProps = GlobalProps & {
+    size: "xsmall" | "small" | "medium" | "large";
+};
+
+export type HeaderProps = GlobalProps & {
+    navLinks: {
+        title: string;
+        href: string;
+    }[];
+    socialLinks?: {
+        title: string;
+        href: string;
+        icon: React.ReactNode;
+    }[];
+};
+
 export type CardProps = GlobalProps & {
     title: string;
     subtitle: string;
