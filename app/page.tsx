@@ -17,11 +17,21 @@ export default function Home() {
           data.topics.map((topic, index) => (
             <Card key={index}>
               <CardHeader>
-                <Image className="
+                <Image 
+                className="
                 relative
                 top-[-1rem]
                 right-[1.2rem]
-                " src={topic.icon} alt={topic.subtitle} width={80} height={80} />
+                " 
+                src={topic.icon} 
+                alt={topic.subtitle} 
+                width={48}
+                height={32}
+                style={{
+                  width: "48px",
+                  height: "32px"
+                }}
+                />
                 <CardTitle>
                   {topic.title}
                 </CardTitle>

@@ -1,14 +1,14 @@
 'use client';
+import { IonBreadcrumb } from "@/app/shared/components/ion-breadcrumb/ion-breadcrumb";
 import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
+import { IonPageInfo } from "@/app/shared/components/ion-page-info/ion-page-info";
 import { TopicProps } from "@/app/shared/components/types";
-import { useParams } from "next/navigation";
-import { useState } from "react";
-import data from "@/app/shared/data/data.json";
-import { IonCaption } from "@/app/shared/components/typo/ion-caption/ion-caption";
 import { IonHeading } from "@/app/shared/components/typo/ion-heading/ion-heading";
 import { IonParagraph } from "@/app/shared/components/typo/ion-paragraph/ion-paragraph";
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import data from "@/app/shared/data/data.json";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useState } from "react";
 
 export default function Topics() {
   const { slug } = useParams();
@@ -25,39 +25,27 @@ export default function Topics() {
 
   return (
     <IonLayout>
-      <Breadcrumb className="
-            py-4
-            ">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/" className="
-            hover:text-[#922AC7]
-            ">
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <IonCaption size="small">
-              {currentTopic.topic.title}
-            </IonCaption>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <IonBreadcrumb navLinks={[
+        {
+          title: "Home",
+          href: "/",
+          nested: [
+            {
+              title: currentTopic.topic.title
+            }
+          ]
+        }
+      ]} />
+
+      <IonPageInfo
+        title={currentTopic.topic.title}
+        subtitle={currentTopic.topic.subtitle}
+        description={currentTopic.topic.description}
+      />
+
       <div className="
             space-y-4
             ">
-        <IonHeading level={1}>
-          {currentTopic.topic.title}
-        </IonHeading>
-        <IonParagraph size="medium">
-          {currentTopic.topic.subtitle}
-        </IonParagraph>
-        <IonParagraph size="medium">
-          {currentTopic.topic.description}
-        </IonParagraph>
-        <hr />
-
         <IonHeading level={2}>
           Conteúdo:
         </IonHeading>

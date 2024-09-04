@@ -1,17 +1,11 @@
 'use client';
+import { IonBreadcrumb } from "@/app/shared/components/ion-breadcrumb/ion-breadcrumb";
 import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
+import { IonPageInfo } from "@/app/shared/components/ion-page-info/ion-page-info";
 import { IonHeading } from "@/app/shared/components/typo/ion-heading/ion-heading";
 import { IonParagraph } from "@/app/shared/components/typo/ion-paragraph/ion-paragraph";
 import data from "@/app/shared/data/data.json";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from 'react';
 import Markdown from "react-markdown";
@@ -32,66 +26,33 @@ export default function Content() {
 
   return (
     <IonLayout>
-      <Breadcrumb className="
-            py-4
-            ">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/" className="
-            hover:text-[#922AC7]
-            ">
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbLink href={`/topics/${slug}`} className="
-            hover:text-[#922AC7]
-            ">
-            {slugData?.title}
-          </BreadcrumbLink>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1">
-              ...{contentData?.title}
-              <span className="sr-only">Toggle menu</span>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="
-            bg-[#202020]
-            text-white
-            ">
-              <DropdownMenuItem>
-                {contentData?.title}
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href={`/topics/${slug}/${contentData?.slug}`}>
-                  {
-                    //pegue o link de introdução e coloque aqui
-                    slugData?.content?.filter((item) => item.slug !== contentData?.slug).map((item) => (
-                      <Link key={item.slug} href={`/topics/${slug}/${item.slug}`}>
-                        {item.title}
-                      </Link>
-                    ))
-                  }
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      <div className="
-            space-y-4
-            ">
-        <hr />
-        <IonHeading level={1}>
-          {currentContent.content.title}
-        </IonHeading>
-        <IonParagraph size="medium">
-          {currentContent.content.description}
-        </IonParagraph>
-        <hr />
+      <IonBreadcrumb navLinks={[
+        {
+          title: "Home",
+          href: "/",
+          nested: [
+            {
+              title: slugData?.title || "",
+              href: `/topics/${slug}`,
+              nested: [
+                {
+                  title: contentData?.title || "",
+                },
+                {
+                  title: (slugData?.content?.filter((item) => item.slug !== contentData?.slug).map((item) => item.title) || []).join(", "),
+                  href: `/topics/${slug}/${slugData?.content?.filter((item) => item.slug !== contentData?.slug)[0].slug}`,
+                }
+              ]
+            }
+          ]
+        }
+      ]} />
+      <IonPageInfo
+        title={currentContent.content.title}
+        description={currentContent.content.description}
+      />
 
+      <div className="space-y-4">
         <IonHeading level={2}>
           Sumário:
         </IonHeading>
@@ -142,18 +103,18 @@ export default function Content() {
                           const match = /language-(\w+)/.exec(className || '')
                           return match ? (
                             <SyntaxHighlighter
-                            language={match[1]}
-                            style={atomDark}
-                            customStyle={{
-                              fontSize: "14px",
-                              padding: "1rem",
-                              borderRadius: "0.5rem",
-                              backgroundColor: "#202020",
-                            }
-                            }
-                            showLineNumbers={true}
-                            PreTag={"div"}
-                            children={String(children).replace(/\n$/, '')}
+                              language={match[1]}
+                              style={atomDark}
+                              customStyle={{
+                                fontSize: "14px",
+                                padding: "1rem",
+                                borderRadius: "0.5rem",
+                                backgroundColor: "#202020",
+                              }
+                              }
+                              showLineNumbers={true}
+                              PreTag={"div"}
+                              children={String(children).replace(/\n$/, '')}
                             />) : (
                             <code {...rest} className={className}>
                               {children}
@@ -165,18 +126,18 @@ export default function Content() {
                   </div>
                 )
               }
-            {
-              ('result' in item) && item.result && (
-                <div>
-                  <IonParagraph size="small">Resultado:</IonParagraph>
-                  <div dangerouslySetInnerHTML={{ __html: item.result }} style={{
-                    backgroundColor: "#202020",
-                    padding: "1rem",
-                    borderRadius: "0.5rem",
-                  }}/>
-                </div>
-              )
-            }
+              {
+                ('result' in item) && item.result && (
+                  <div>
+                    <IonParagraph size="small">Resultado:</IonParagraph>
+                    <div dangerouslySetInnerHTML={{ __html: item.result }} style={{
+                      backgroundColor: "#202020",
+                      padding: "1rem",
+                      borderRadius: "0.5rem",
+                    }} />
+                  </div>
+                )
+              }
               {
                 ('note' in item) && item.note && (
                   <div className="

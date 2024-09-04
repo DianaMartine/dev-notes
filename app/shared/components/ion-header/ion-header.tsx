@@ -20,30 +20,37 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
                 </IonHeading>
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button className="absolute top-5 right-4 bg-[#1D0259] hover:bg-[#0D0126] hover:outline hover:outline-[1px] hover:outline-white">
-                            <HamburgerMenuIcon className="" />
+                        <Button 
+                        size="sm"
+                        className="absolute top-5 right-4 bg-[#1D0259] hover:bg-[#0D0126] hover:outline hover:outline-[1px] hover:outline-white">
+                            <HamburgerMenuIcon />
                         </Button>
                     </SheetTrigger>
                     <SheetContent className="bg-[#1D0259] text-white">
                         <SheetHeader>
                             <SheetTitle>
-                                <IonHeading level={6} textColor="white">
+                                <IonCaption size="medium" textColor="white">
                                     Dev Dictionary
-                                </IonHeading>
+                                </IonCaption>
                             </SheetTitle>
                             <SheetDescription>
                                 A dictionary for developers
-                                <ul className="mt-8">
+                                <span className="
+                                mt-8
+                                flex
+                                flex-col
+                                gap-4
+                                ">
                                     {navLinks.map((link) => (
-                                        <li key={link.title} className="mb-2">
+                                        <span key={link.title} className="mb-2">
                                             <Link href={link.href}>
                                                 <IonCaption size="small" textColor="white">
                                                     {link.title}
                                                 </IonCaption>
                                             </Link>
-                                        </li>
+                                        </span>
                                     ))}
-                                </ul>
+                                </span>
                             </SheetDescription>
 
                         </SheetHeader>

@@ -84,3 +84,25 @@ export type ButtonProps = {
 export type HamburgerProps = {
     onClick: () => void;
 };
+
+export type BreadcrumbProps = GlobalProps & {
+    navLinks: MainBreadcrumbProps[];
+};
+
+export type MainBreadcrumbProps = {
+    title: string;
+    href: string;
+    nested?: NestedBreadcrumbProps[];
+};
+
+export type NestedBreadcrumbProps = {
+    title: string;
+    href?: string;
+    nested?: NestedBreadcrumbProps[];
+};
+
+export type PageInfoProps = GlobalProps & {
+    title: string;
+    description: string;
+    subtitle?: string;
+};
