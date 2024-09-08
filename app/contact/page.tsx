@@ -1,3 +1,5 @@
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 import { IonBreadcrumb } from "../shared/components/ion-breadcrumb/ion-breadcrumb";
 import IonLayout from "../shared/components/ion-layout/ion-layout";
 import { IonPageInfo } from "../shared/components/ion-page-info/ion-page-info";
@@ -11,20 +13,33 @@ export default function Contact() {
                     href: "/",
                     nested: [
                         {
-                            title: "Contact"
+                            title: "Contato"
                         }
                     ]
                 },
             ]} />
 
             <IonPageInfo
-                title="Contact"
-                description="You can contact us at:">
-                <ul>
+                title="Contato"
+                description="Você pode nos achar em:">
+                <ul className="
+                flex
+                flex-col
+                gap-4
+                ">
                     <li>
-                        <a href="mailto:divisiontechgroup@gmail.com">
+                        <Link
+                            className="flex items-center gap-2"
+                            href="https://github.com/div-group-official">
+                            <GitHubLogoIcon width={24} height={24} />
+                            GitHub
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="mailto:divisiontechgroup@gmail.com">
                             divisiontechgroup@gmail.com
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </IonPageInfo>

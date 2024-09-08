@@ -20,9 +20,20 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
                 </IonHeading>
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button 
-                        size="sm"
-                        className="absolute top-5 right-4 bg-[#1D0259] hover:bg-[#0D0126] hover:outline hover:outline-[1px] hover:outline-white">
+                        <Button
+                            size="sm"
+                            className="
+                        absolute 
+                        top-4
+                        right-4
+                        sm:right-6
+                        md:right-8
+                        lg:right-12
+                        bg-[#1D0259] 
+                        hover:bg-[#0D0126] 
+                        hover:outline 
+                        hover:outline-[1px] hover:outline-white
+                        ">
                             <HamburgerMenuIcon />
                         </Button>
                     </SheetTrigger>
@@ -33,8 +44,10 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
                                     Dev Dictionary
                                 </IonCaption>
                             </SheetTitle>
-                            <SheetDescription>
-                                A dictionary for developers
+                            <SheetDescription className="
+                            text-[#FF66C4]
+                            ">
+                                Um dicionário para desenvolvedores
                                 <span className="
                                 mt-8
                                 flex

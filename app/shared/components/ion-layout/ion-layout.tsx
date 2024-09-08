@@ -17,14 +17,17 @@ export default function IonLayout({
         ">
             <IonHeader navLinks={[
                 { title: "Home", href: "/" },
-                { title: "About", href: "/about" },
-                { title: "Contact", href: "/contact" },
+                { title: "Sobre", href: "/about" },
+                { title: "Contato", href: "/contact" },
             ]}
                 socialLinks={[
                     { title: "GitHub", href: "https://github.com/division-group", icon: <GitHubLogoIcon /> },
                 ]} />
             <main className="
             p-4
+            flex
+            flex-col
+            gap-4
             ">{children}</main>
             <footer className="
             p-4 

@@ -11,15 +11,15 @@ export default function About() {
                     href: "/",
                     nested: [
                         {
-                            title: "About"
+                            title: "Sobre",
                         }
                     ]
                 }
             ]} />
 
             <IonPageInfo
-                title="About"
-                description="This is a dictionary of developer terms. It is a project by Div Group." />
+                title="Sobre"
+                description="Olá Jovem, tudo certo? Esse projeto surgiu de uma ideia de transformar meu caderno de anotações em algo para compartilhar com a comunidade Dev. Aqui você irá encontrar tópicos para estudar de um modo mais fácil e mastigado, pois pra quê complicar mais né? Espero que aproveitem bem esse conteúdo." />
         </IonLayout>
     )
 };
