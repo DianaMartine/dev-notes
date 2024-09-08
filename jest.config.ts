@@ -1,9 +1,9 @@
-import nextJest from 'next/jest';
-import type {Config} from 'jest';
+import nextJest from "next/jest";
+import type { Config } from "jest";
 
 const createJestConfig = nextJest({
-  dir: './',
-})
+  dir: "./",
+});
 
 const config: Config = {
   clearMocks: true,

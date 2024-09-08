@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { IonBreadcrumb } from "@/app/shared/components/ion-breadcrumb/ion-breadcrumb";
 import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
 import { IonPageInfo } from "@/app/shared/components/ion-page-info/ion-page-info";
@@ -10,7 +10,9 @@ import { useState } from "react";
 
 export default function Topics() {
   const { slug } = useParams();
-  const slugData = data.topics.find((topic) => topic.title.toLowerCase() === slug);
+  const slugData = data.topics.find(
+    (topic) => topic.title.toLowerCase() === slug,
+  );
 
   const [currentTopic] = useState<TopicProps>({
     title: slugData?.title || "",
@@ -21,17 +23,19 @@ export default function Topics() {
 
   return (
     <IonLayout>
-      <IonBreadcrumb navLinks={[
-        {
-          title: "Home",
-          href: "/",
-          nested: [
-            {
-              title: currentTopic.title,
-            }
-          ]
-        }
-      ]} />
+      <IonBreadcrumb
+        navLinks={[
+          {
+            title: "Home",
+            href: "/",
+            nested: [
+              {
+                title: currentTopic.title,
+              },
+            ],
+          },
+        ]}
+      />
 
       <IonPageInfo
         title={currentTopic.title}
@@ -39,12 +43,14 @@ export default function Topics() {
         description={currentTopic.description}
       />
 
-      <div className="
-      grid
-      sm:grid-cols-2
-      md:grid-cols-3
-      lg:grid-cols-4
-      gap-4">
+      <div
+        className="
+grid
+sm:grid-cols-2
+md:grid-cols-3
+lg:grid-cols-4
+gap-4"
+      >
         {slugData?.content.map((topic, index) => (
           <IonTopic
             key={index}
@@ -54,7 +60,6 @@ export default function Topics() {
           />
         ))}
       </div>
-
     </IonLayout>
   );
 }

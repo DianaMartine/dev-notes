@@ -7,19 +7,21 @@ export const metadata: Metadata = {
   applicationName: "Dev Dictionary",
   category: "Development",
   keywords: ["development", "dictionary", "terms"],
-  authors: [{
-    name: "Division Group",
-    url: "https://github.com/division-group",
-  },
-  {
-    name: "Diana Martine",
-    url: "https://github.com/dianamartine",
-  }],
+  authors: [
+    {
+      name: "Division Group",
+      url: "https://github.com/division-group",
+    },
+    {
+      name: "Diana Martine",
+      url: "https://github.com/dianamartine",
+    },
+  ],
   icons: [
     {
       rel: "icon",
       url: "https://github.com/division-group.png",
-    }
+    },
   ],
 };
 

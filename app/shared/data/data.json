@@ -1,311 +1,311 @@
 {
-    "topics": [
+  "topics": [
+    {
+      "title": "HTML5",
+      "subtitle": "HyperText Markup Language",
+      "description": "HTML é a linguagem padrão para criar páginas da web.",
+      "icon": "https://img.shields.io/badge/-%23E34F2600.svg?style=for-the-badge&logo=html5&logoColor=23e34f26",
+      "slug": "html5",
+      "content": [
         {
-            "title": "HTML5",
-            "subtitle": "HyperText Markup Language",
-            "description": "HTML é a linguagem padrão para criar páginas da web.",
-            "icon": "https://img.shields.io/badge/-%23E34F2600.svg?style=for-the-badge&logo=html5&logoColor=23e34f26",
-            "slug": "html5",
-            "content": [
-                {
-                    "title": "Introdução",
-                    "description": "HTML5 é a versão mais recente do HTML. Com novos elementos, atributos e comportamentos, é uma nova e melhorada versão do HTML.",
-                    "slug": "introducao",
-                    "content": [
-                        {
-                            "title": "História",
-                            "description": "HTML5 foi proposto pela primeira vez por Ian Hickson da Google em 2004. Em 2008, a W3C publicou a primeira versão do HTML5.",
-                            "slug": "historia"
-                        },
-                        {
-                            "title": "Por que HTML5?",
-                            "description": "HTML5 é projetado para tornar a criação de aplicativos web mais fácil e eficiente.",
-                            "slug": "por-que"
-                        },
-                        {
-                            "title": "Novidades",
-                            "description": "HTML5 introduziu muitos novos elementos que ajudam a criar páginas da web mais eficientes.",
-                            "slug": "novidades"
-                        },
-                        {
-                            "title": "Compatibilidade",
-                            "description": "HTML5 é compatível com todos os navegadores modernos.",
-                            "slug": "compatibilidade"
-                        },
-                        {
-                            "title": "Estrutura Básica",
-                            "description": "A estrutura básica de um documento HTML5 é composta por elementos HTML.",
-                            "example": "```html\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Page Title</title>\n\t</head>\n\t<body>\n\t\t<h1>This is a Heading</h1>\n\t\t<p>This is a paragraph.</p>\n\t</body>\n</html>\n```",
-                            "slug": "estrutura"
-                        },
-                        {
-                            "title": "Elementos",
-                            "description": "Elementos HTML5 são usados para definir a estrutura de uma página da web.",
-                            "slug": "elementos"
-                        }
-                    ]
-                },
-                {
-                    "title": "HTML5 Tags",
-                    "description": "HTML5 tags são usadas para definir elementos HTML.",
-                    "slug": "tags",
-                    "content": [
-                        {
-                            "title": "Comments",
-                            "description": "Define um comentário no código HTML.",
-                            "example": "```html\n<!-- This is a comment -->\n```",
-                            "note": "Comentários não são exibidos na página da web.",
-                            "slug": "comentario"
-                        },
-                        {
-                            "title": "<a>",
-                            "description": "Define um hyperlink, que é usado para ligar de uma página para outra.",
-                            "example": "```html\n<a\n\thref='https://github.com/division-group'>\n\tThis is a link\n</a>\n```",
-                            "note": "O atributo href especifica o URL da página para a qual o link vai.",
-                            "result": "<a href='https://github.com/division-group'>This is a link</a>",
-                            "slug": "a"
-                        },
-                        {
-                            "title": "<abbr>",
-                            "description": "Define uma abreviação ou acrônimo.",
-                            "example": "```html\n<abbr\n\ttitle='World Health Organization'>\n\tWHO\n</abbr>\n```",
-                            "note": "O atributo title especifica o significado da abreviação.",
-                            "result": "<abbr title='World Health Organization'>WHO</abbr>",
-                            "slug": "abbr"
-                        },
-                        {
-                            "title": "<address>",
-                            "description": "Define informações de contato para o autor/proprietário de um documento ou artigo.",
-                            "example": "```html\n<address>\n\tWritten by Div Group.<br>\n\tVisit us at:<br>\n\thttps://github.com/division-group\n</address>\n```",
-                            "note": "O elemento <address> deve ser dentro de um elemento <article> ou <body>.",
-                            "result": "<address>Written by Div Group.<br>Visit us at:<br>\n\thttps://github.com/division-group</address>",
-                            "slug": "address"
-                        },
-                        {
-                            "title": "<area>",
-                            "description": "Define uma área sensível em um mapa de imagem.",
-                            "example": "```html\n<img\n\tsrc='https://github.com/division-group.png'\n\tusemap='#workmap'>\n\n<map name='workmap'>\n\t<area\n\t\tshape='rect'\n\t\tcoords='34,44,270,350'\n\thref='https://github.com/division-group.png'>\n</map>\n```",
-                            "note": "O atributo shape especifica a forma da área e o atributo coords especifica as coordenadas da área.",
-                            "result": "<img src='https://github.com/division-group.png' usemap='#workmap'><map name='workmap'><area shape='rect' coords='34,44,270,350' href='https://github.com/division-group.png'></map>",
-                            "slug": "area"
-                        },
-                        {
-                            "title": "<article>",
-                            "description": "Define um artigo.",
-                            "example": "```html\n<article>\n\t<h1>Div Group</h1>\n\t<p>Div Group is a web development company.</p>\n</article>\n```",
-                            "note": "O elemento <article> é usado para conteúdo independente.",
-                            "result": "<article><h1>Div Group</h1><p>Div Group is a web development company.</p></article>",
-                            "slug": "article"
-                        },
-                        {
-                            "title": "<aside>",
-                            "description": "Define conteúdo à parte do conteúdo da página.",
-                            "example": "```html\n<p>Div Group is a web development company.</p>\n\n<aside>\n\t<h4>Company Information</h4>\n\t<p>Div Group is a web development company.</p>\n</aside>\n```",
-                            "note": "O elemento <aside> é usado para conteúdo secundário.",
-                            "result": "<p>Div Group is a web development company.</p><aside><h4>Company Information</h4><p>Div Group is a web development company.</p></aside>",
-                            "slug": "aside"
-                        }
-                    ]
-                }
-            ]
+          "title": "Introdução",
+          "description": "HTML5 é a versão mais recente do HTML. Com novos elementos, atributos e comportamentos, é uma nova e melhorada versão do HTML.",
+          "slug": "introducao",
+          "content": [
+            {
+              "title": "História",
+              "description": "HTML5 foi proposto pela primeira vez por Ian Hickson da Google em 2004. Em 2008, a W3C publicou a primeira versão do HTML5.",
+              "slug": "historia"
+            },
+            {
+              "title": "Por que HTML5?",
+              "description": "HTML5 é projetado para tornar a criação de aplicativos web mais fácil e eficiente.",
+              "slug": "por-que"
+            },
+            {
+              "title": "Novidades",
+              "description": "HTML5 introduziu muitos novos elementos que ajudam a criar páginas da web mais eficientes.",
+              "slug": "novidades"
+            },
+            {
+              "title": "Compatibilidade",
+              "description": "HTML5 é compatível com todos os navegadores modernos.",
+              "slug": "compatibilidade"
+            },
+            {
+              "title": "Estrutura Básica",
+              "description": "A estrutura básica de um documento HTML5 é composta por elementos HTML.",
+              "example": "```html\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Page Title</title>\n\t</head>\n\t<body>\n\t\t<h1>This is a Heading</h1>\n\t\t<p>This is a paragraph.</p>\n\t</body>\n</html>\n```",
+              "slug": "estrutura"
+            },
+            {
+              "title": "Elementos",
+              "description": "Elementos HTML5 são usados para definir a estrutura de uma página da web.",
+              "slug": "elementos"
+            }
+          ]
         },
         {
-            "title": "CSS3",
-            "subtitle": "Cascading Style Sheets",
-            "description": "CSS is a language that describes the style of an HTML document.",
-            "icon": "https://img.shields.io/badge/-%231572B600.svg?style=for-the-badge&logo=css3&logoColor=1572b6",
-            "slug": "css3",
-            "content": [
-                {
-                    "title": "Introdução",
-                    "description": "CSS3 é a versão mais recente do CSS. Com novos recursos, é uma nova e melhorada versão do CSS.",
-                    "slug": "introducao",
-                    "content": [
-                        {
-                            "title": "História",
-                            "description": "CSS3 foi proposto pela primeira vez por Håkon Wium Lie da Opera Software em 1999. Em 2011, a W3C publicou a primeira versão do CSS3.",
-                            "slug": "historia"
-                        },
-                        {
-                            "title": "Por que CSS3?",
-                            "description": "CSS3 é projetado para tornar a estilização de páginas da web mais fácil e eficiente.",
-                            "slug": "por-que"
-                        },
-                        {
-                            "title": "Novidades",
-                            "description": "CSS3 introduziu muitos novos recursos que ajudam a estilizar páginas da web mais eficientes.",
-                            "slug": "novidades"
-                        },
-                        {
-                            "title": "Compatibilidade",
-                            "description": "CSS3 é compatível com todos os navegadores modernos.",
-                            "slug": "compatibilidade"
-                        },
-                        {
-                            "title": "Sintaxe",
-                            "description": "A sintaxe de uma regra CSS3 é composta por um seletor e uma declaração.",
-                            "example": "```css\nh1 {\n\tcolor: blue;\n\ttext-align: center;\n}\n```",
-                            "slug": "sintaxe"
-                        },
-                        {
-                            "title": "Seletores",
-                            "description": "Seletores CSS3 são usados para selecionar elementos HTML.",
-                            "slug": "seletores"
-                        }
-                    ]
-                },
-                {
-                    "title": "CSS3 Properties",
-                    "description": "CSS3 properties são usadas para estilizar elementos HTML.",
-                    "slug": "properties",
-                    "content": [
-                        {
-                            "title": "color",
-                            "description": "Define a cor do texto.",
-                            "example": "```css\ncolor: blue;\n```",
-                            "slug": "color"
-                        },
-                        {
-                            "title": "font-family",
-                            "description": "Define a família da fonte",
-                            "example": "```css\nfont-family: Arial, sans-serif;\n```",
-                            "slug": "font-family"
-                        },
-                        {
-                            "title": "font-size",
-                            "description": "Define o tamanho da fonte.",
-                            "example": "```css\nfont-size: 16px;\n```",
-                            "slug": "font-size"
-                        },
-                        {
-                            "title": "text-align",
-                            "description": "Define o alinhamento do texto.",
-                            "example": "```css\ntext-align: center;\n```",
-                            "slug": "text-align"
-                        },
-                        {
-                            "title": "background-color",
-                            "description": "Define a cor de fundo.",
-                            "example": "```css\nbackground-color: lightblue;\n```",
-                            "slug": "background-color"
-                        },
-                        {
-                            "title": "border",
-                            "description": "Define a borda.",
-                            "example": "```css\nborder: 1px solid black;\n```",
-                            "slug": "border"
-                        },
-                        {
-                            "title": "margin",
-                            "description": "Define a margem.",
-                            "example": "```css\nmargin: 10px;\n```",
-                            "slug": "margin"
-                        },
-                        {
-                            "title": "padding",
-                            "description": "Define o preenchimento.",
-                            "example": "```css\npadding: 10px;\n```",
-                            "slug": "padding"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "JavaScript",
-            "subtitle": "JS",
-            "description": "JavaScript is the programming language of HTML and the Web.",
-            "icon": "https://img.shields.io/badge/-%2332333000.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
-            "slug": "javascript",
-            "content": [
-                {
-                    "title": "Introdução",
-                    "description": "JavaScript é uma linguagem de programação que é usada para criar páginas da web interativas.",
-                    "slug": "introducao",
-                    "content": [
-                        {
-                            "title": "História",
-                            "description": "JavaScript foi criado por Brendan Eich da Netscape em 1995. Em 1997, a ECMA International publicou a primeira versão do JavaScript.",
-                            "slug": "historia"
-                        },
-                        {
-                            "title": "Por que JavaScript?",
-                            "description": "JavaScript é projetado para tornar a interatividade de páginas da web mais fácil e eficiente.",
-                            "slug": "por-que"
-                        },
-                        {
-                            "title": "Novidades",
-                            "description": "JavaScript introduziu muitos novos recursos que ajudam a criar páginas da web mais interativas.",
-                            "slug": "novidades"
-                        },
-                        {
-                            "title": "Compatibilidade",
-                            "description": "JavaScript é compatível com todos os navegadores modernos.",
-                            "slug": "compatibilidade"
-                        },
-                        {
-                            "title": "Sintaxe",
-                            "description": "A sintaxe de um script JavaScript é composta por declarações e expressões.",
-                            "example": "```javascript\nvar x = 5;\nvar y = 6;\nvar z = x + y;\n```",
-                            "slug": "sintaxe"
-                        },
-                        {
-                            "title": "Variáveis",
-                            "description": "Variáveis JavaScript são usadas para armazenar valores.",
-                            "slug": "variaveis"
-                        }
-                    ]
-                },
-                {
-                    "title": "JavaScript Functions",
-                    "description": "JavaScript functions são usadas para executar código.",
-                    "slug": "functions",
-                    "content": [
-                        {
-                            "title": "alert()",
-                            "description": "Exibe uma caixa de diálogo com uma mensagem.",
-                            "example": "```javascript\nalert('Hello, World!');\n```",
-                            "slug": "alert"
-                        },
-                        {
-                            "title": "prompt()",
-                            "description": "Exibe uma caixa de diálogo com uma mensagem e uma caixa de entrada.",
-                            "example": "```javascript\nvar name = prompt('What is your name?');\n```",
-                            "slug": "prompt"
-                        },
-                        {
-                            "title": "console.log()",
-                            "description": "Exibe uma mensagem no console do navegador.",
-                            "example": "```javascript\nconsole.log('Hello, World!');\n```",
-                            "slug": "console-log"
-                        },
-                        {
-                            "title": "document.write()",
-                            "description": "Escreve conteúdo na página da web.",
-                            "example": "```javascript\ndocument.write('Hello, World!');\n```",
-                            "slug": "document-write"
-                        },
-                        {
-                            "title": "addEventListener()",
-                            "description": "Adiciona um evento a um elemento HTML.",
-                            "example": "```javascript\ndocument.getElementById('myButton').addEventListener('click', function() {\n\talert('Hello, World!');\n});\n```",
-                            "slug": "add-event-listener"
-                        },
-                        {
-                            "title": "setInterval()",
-                            "description": "Executa uma função a cada intervalo de tempo.",
-                            "example": "```javascript\nsetInterval(function() {\n\talert('Hello, World!');\n}, 1000);\n```",
-                            "slug": "set-interval"
-                        },
-                        {
-                            "title": "setTimeout()",
-                            "description": "Executa uma função após um intervalo de tempo.",
-                            "example": "```javascript\nsetTimeout(function() {\n\talert('Hello, World!');\n}, 1000);\n```",
-                            "slug": "set-timeout"
-                        }
-                    ]
-                }
-            ]
+          "title": "HTML5 Tags",
+          "description": "HTML5 tags são usadas para definir elementos HTML.",
+          "slug": "tags",
+          "content": [
+            {
+              "title": "Comments",
+              "description": "Define um comentário no código HTML.",
+              "example": "```html\n<!-- This is a comment -->\n```",
+              "note": "Comentários não são exibidos na página da web.",
+              "slug": "comentario"
+            },
+            {
+              "title": "<a>",
+              "description": "Define um hyperlink, que é usado para ligar de uma página para outra.",
+              "example": "```html\n<a\n\thref='https://github.com/division-group'>\n\tThis is a link\n</a>\n```",
+              "note": "O atributo href especifica o URL da página para a qual o link vai.",
+              "result": "<a href='https://github.com/division-group'>This is a link</a>",
+              "slug": "a"
+            },
+            {
+              "title": "<abbr>",
+              "description": "Define uma abreviação ou acrônimo.",
+              "example": "```html\n<abbr\n\ttitle='World Health Organization'>\n\tWHO\n</abbr>\n```",
+              "note": "O atributo title especifica o significado da abreviação.",
+              "result": "<abbr title='World Health Organization'>WHO</abbr>",
+              "slug": "abbr"
+            },
+            {
+              "title": "<address>",
+              "description": "Define informações de contato para o autor/proprietário de um documento ou artigo.",
+              "example": "```html\n<address>\n\tWritten by Div Group.<br>\n\tVisit us at:<br>\n\thttps://github.com/division-group\n</address>\n```",
+              "note": "O elemento <address> deve ser dentro de um elemento <article> ou <body>.",
+              "result": "<address>Written by Div Group.<br>Visit us at:<br>\n\thttps://github.com/division-group</address>",
+              "slug": "address"
+            },
+            {
+              "title": "<area>",
+              "description": "Define uma área sensível em um mapa de imagem.",
+              "example": "```html\n<img\n\tsrc='https://github.com/division-group.png'\n\tusemap='#workmap'>\n\n<map name='workmap'>\n\t<area\n\t\tshape='rect'\n\t\tcoords='34,44,270,350'\n\thref='https://github.com/division-group.png'>\n</map>\n```",
+              "note": "O atributo shape especifica a forma da área e o atributo coords especifica as coordenadas da área.",
+              "result": "<img src='https://github.com/division-group.png' usemap='#workmap'><map name='workmap'><area shape='rect' coords='34,44,270,350' href='https://github.com/division-group.png'></map>",
+              "slug": "area"
+            },
+            {
+              "title": "<article>",
+              "description": "Define um artigo.",
+              "example": "```html\n<article>\n\t<h1>Div Group</h1>\n\t<p>Div Group is a web development company.</p>\n</article>\n```",
+              "note": "O elemento <article> é usado para conteúdo independente.",
+              "result": "<article><h1>Div Group</h1><p>Div Group is a web development company.</p></article>",
+              "slug": "article"
+            },
+            {
+              "title": "<aside>",
+              "description": "Define conteúdo à parte do conteúdo da página.",
+              "example": "```html\n<p>Div Group is a web development company.</p>\n\n<aside>\n\t<h4>Company Information</h4>\n\t<p>Div Group is a web development company.</p>\n</aside>\n```",
+              "note": "O elemento <aside> é usado para conteúdo secundário.",
+              "result": "<p>Div Group is a web development company.</p><aside><h4>Company Information</h4><p>Div Group is a web development company.</p></aside>",
+              "slug": "aside"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "title": "CSS3",
+      "subtitle": "Cascading Style Sheets",
+      "description": "CSS is a language that describes the style of an HTML document.",
+      "icon": "https://img.shields.io/badge/-%231572B600.svg?style=for-the-badge&logo=css3&logoColor=1572b6",
+      "slug": "css3",
+      "content": [
+        {
+          "title": "Introdução",
+          "description": "CSS3 é a versão mais recente do CSS. Com novos recursos, é uma nova e melhorada versão do CSS.",
+          "slug": "introducao",
+          "content": [
+            {
+              "title": "História",
+              "description": "CSS3 foi proposto pela primeira vez por Håkon Wium Lie da Opera Software em 1999. Em 2011, a W3C publicou a primeira versão do CSS3.",
+              "slug": "historia"
+            },
+            {
+              "title": "Por que CSS3?",
+              "description": "CSS3 é projetado para tornar a estilização de páginas da web mais fácil e eficiente.",
+              "slug": "por-que"
+            },
+            {
+              "title": "Novidades",
+              "description": "CSS3 introduziu muitos novos recursos que ajudam a estilizar páginas da web mais eficientes.",
+              "slug": "novidades"
+            },
+            {
+              "title": "Compatibilidade",
+              "description": "CSS3 é compatível com todos os navegadores modernos.",
+              "slug": "compatibilidade"
+            },
+            {
+              "title": "Sintaxe",
+              "description": "A sintaxe de uma regra CSS3 é composta por um seletor e uma declaração.",
+              "example": "```css\nh1 {\n\tcolor: blue;\n\ttext-align: center;\n}\n```",
+              "slug": "sintaxe"
+            },
+            {
+              "title": "Seletores",
+              "description": "Seletores CSS3 são usados para selecionar elementos HTML.",
+              "slug": "seletores"
+            }
+          ]
+        },
+        {
+          "title": "CSS3 Properties",
+          "description": "CSS3 properties são usadas para estilizar elementos HTML.",
+          "slug": "properties",
+          "content": [
+            {
+              "title": "color",
+              "description": "Define a cor do texto.",
+              "example": "```css\ncolor: blue;\n```",
+              "slug": "color"
+            },
+            {
+              "title": "font-family",
+              "description": "Define a família da fonte",
+              "example": "```css\nfont-family: Arial, sans-serif;\n```",
+              "slug": "font-family"
+            },
+            {
+              "title": "font-size",
+              "description": "Define o tamanho da fonte.",
+              "example": "```css\nfont-size: 16px;\n```",
+              "slug": "font-size"
+            },
+            {
+              "title": "text-align",
+              "description": "Define o alinhamento do texto.",
+              "example": "```css\ntext-align: center;\n```",
+              "slug": "text-align"
+            },
+            {
+              "title": "background-color",
+              "description": "Define a cor de fundo.",
+              "example": "```css\nbackground-color: lightblue;\n```",
+              "slug": "background-color"
+            },
+            {
+              "title": "border",
+              "description": "Define a borda.",
+              "example": "```css\nborder: 1px solid black;\n```",
+              "slug": "border"
+            },
+            {
+              "title": "margin",
+              "description": "Define a margem.",
+              "example": "```css\nmargin: 10px;\n```",
+              "slug": "margin"
+            },
+            {
+              "title": "padding",
+              "description": "Define o preenchimento.",
+              "example": "```css\npadding: 10px;\n```",
+              "slug": "padding"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JavaScript",
+      "subtitle": "JS",
+      "description": "JavaScript is the programming language of HTML and the Web.",
+      "icon": "https://img.shields.io/badge/-%2332333000.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
+      "slug": "javascript",
+      "content": [
+        {
+          "title": "Introdução",
+          "description": "JavaScript é uma linguagem de programação que é usada para criar páginas da web interativas.",
+          "slug": "introducao",
+          "content": [
+            {
+              "title": "História",
+              "description": "JavaScript foi criado por Brendan Eich da Netscape em 1995. Em 1997, a ECMA International publicou a primeira versão do JavaScript.",
+              "slug": "historia"
+            },
+            {
+              "title": "Por que JavaScript?",
+              "description": "JavaScript é projetado para tornar a interatividade de páginas da web mais fácil e eficiente.",
+              "slug": "por-que"
+            },
+            {
+              "title": "Novidades",
+              "description": "JavaScript introduziu muitos novos recursos que ajudam a criar páginas da web mais interativas.",
+              "slug": "novidades"
+            },
+            {
+              "title": "Compatibilidade",
+              "description": "JavaScript é compatível com todos os navegadores modernos.",
+              "slug": "compatibilidade"
+            },
+            {
+              "title": "Sintaxe",
+              "description": "A sintaxe de um script JavaScript é composta por declarações e expressões.",
+              "example": "```javascript\nvar x = 5;\nvar y = 6;\nvar z = x + y;\n```",
+              "slug": "sintaxe"
+            },
+            {
+              "title": "Variáveis",
+              "description": "Variáveis JavaScript são usadas para armazenar valores.",
+              "slug": "variaveis"
+            }
+          ]
+        },
+        {
+          "title": "JavaScript Functions",
+          "description": "JavaScript functions são usadas para executar código.",
+          "slug": "functions",
+          "content": [
+            {
+              "title": "alert()",
+              "description": "Exibe uma caixa de diálogo com uma mensagem.",
+              "example": "```javascript\nalert('Hello, World!');\n```",
+              "slug": "alert"
+            },
+            {
+              "title": "prompt()",
+              "description": "Exibe uma caixa de diálogo com uma mensagem e uma caixa de entrada.",
+              "example": "```javascript\nvar name = prompt('What is your name?');\n```",
+              "slug": "prompt"
+            },
+            {
+              "title": "console.log()",
+              "description": "Exibe uma mensagem no console do navegador.",
+              "example": "```javascript\nconsole.log('Hello, World!');\n```",
+              "slug": "console-log"
+            },
+            {
+              "title": "document.write()",
+              "description": "Escreve conteúdo na página da web.",
+              "example": "```javascript\ndocument.write('Hello, World!');\n```",
+              "slug": "document-write"
+            },
+            {
+              "title": "addEventListener()",
+              "description": "Adiciona um evento a um elemento HTML.",
+              "example": "```javascript\ndocument.getElementById('myButton').addEventListener('click', function() {\n\talert('Hello, World!');\n});\n```",
+              "slug": "add-event-listener"
+            },
+            {
+              "title": "setInterval()",
+              "description": "Executa uma função a cada intervalo de tempo.",
+              "example": "```javascript\nsetInterval(function() {\n\talert('Hello, World!');\n}, 1000);\n```",
+              "slug": "set-interval"
+            },
+            {
+              "title": "setTimeout()",
+              "description": "Executa uma função após um intervalo de tempo.",
+              "example": "```javascript\nsetTimeout(function() {\n\talert('Hello, World!');\n}, 1000);\n```",
+              "slug": "set-timeout"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
