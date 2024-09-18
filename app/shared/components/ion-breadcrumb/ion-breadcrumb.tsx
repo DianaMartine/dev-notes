@@ -175,3 +175,5 @@ text-[#FAEBD7]
 ) as React.ForwardRefExoticComponent<
   BreadcrumbProps & React.RefAttributes<HTMLDivElement>
 >;
+
+IonBreadcrumb.displayName = "IonBreadcrumb";

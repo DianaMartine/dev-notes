@@ -1,4 +1,4 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { IonBreadcrumb } from "../shared/components/ion-breadcrumb/ion-breadcrumb";
 import IonLayout from "../shared/components/ion-layout/ion-layout";

@@ -110,7 +110,6 @@ gap-2
                 <div>
                   <IonParagraph size="small">Exemplo:</IonParagraph>
                   <Markdown
-                    children={item.example}
                     components={{
                       code(props) {
                         const { children, className, node, ...rest } = props;
@@ -127,16 +126,18 @@ gap-2
                             }}
                             showLineNumbers={true}
                             PreTag={"div"}
-                            children={String(children).replace(/\n$/, "")}
-                          />
+                          >
+                            {String(children).replace(/\n$/, "")}
+                          </SyntaxHighlighter>
                         ) : (
                           <code {...rest} className={className}>
                             {children}
                           </code>
                         );
                       },
-                    }}
-                  />
+                    }}>
+                    {item.example}
+                  </Markdown>
                 </div>
               )}
               {"result" in item && item.result && (

@@ -1,8 +1,4 @@
-/**
- *@format
- *@type{import("prettier").Config}
- */
-
+/** @type {import('prettier').Config} */
 const config = {
 	bracketSameLine: true,
 	bracketSpacing: true,

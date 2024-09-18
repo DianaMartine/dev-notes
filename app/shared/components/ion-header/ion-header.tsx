@@ -104,3 +104,5 @@ gap-4
 ) as React.ForwardRefExoticComponent<
   HeaderProps & React.RefAttributes<HTMLDivElement>
 >;
+
+IonHeader.displayName = "IonHeader";

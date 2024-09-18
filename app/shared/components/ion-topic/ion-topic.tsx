@@ -5,11 +5,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 import Link from "next/link";
 import { forwardRef } from "react";
-import { TopicProps, TopicsProps } from "../types";
-import { IonHeading } from "../typo/ion-heading/ion-heading";
-import Image from "next/image";
+import { TopicProps } from "../types";
 
 export const IonTopic = forwardRef<HTMLDivElement, TopicProps>(
   ({ description, title, icon, slug, subtitle }, ref) => {
@@ -66,38 +65,4 @@ hover:text-[#FF66C4]
   TopicProps & React.RefAttributes<HTMLDivElement>
 >;
 
-export const IonTopics = forwardRef<HTMLDivElement, TopicsProps>(
-  ({ topics }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className="
-space-y-4
-"
-      >
-        <IonHeading level={2}>Tópicos:</IonHeading>
-
-        <ul
-          className="
-flex
-flex-col
-gap-4
-list-disc
-"
-        >
-          {topics.map((topic, index) => (
-            <IonTopic
-              key={index}
-              title={topic.title}
-              description={topic.description}
-              slug={topic.slug}
-              subtitle={topic.subtitle}
-            />
-          ))}
-        </ul>
-      </div>
-    );
-  },
-) as React.ForwardRefExoticComponent<
-  TopicsProps & React.RefAttributes<HTMLDivElement>
->;
+IonTopic.displayName = "IonTopic";
