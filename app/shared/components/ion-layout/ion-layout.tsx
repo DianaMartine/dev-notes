@@ -1,3 +1,6 @@
+import common from "@/app/shared/data/common.json";
+import routes from "@/app/shared/data/routes.json";
+import socialLinks from "@/app/shared/data/socialLinks.json";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { IonHeader } from "../ion-header/ion-header";
 
@@ -9,48 +12,50 @@ export default function IonLayout({
   return (
     <div
       className="
-w-screen 
-h-screen 
-bg-[#0D0126] 
-text-white 
-p-4
-overflow-y-auto
-"
+      h-screen 
+      bg-[#0D0126] 
+      text-white 
+      p-4
+      overflow-y-auto
+      w-screen 
+      "
     >
       <IonHeader
         navLinks={[
-          { title: "Home", href: "/" },
-          { title: "Sobre", href: "/about" },
-          { title: "Contato", href: "/contact" },
+          { title: routes.home.title, href: routes.home.url },
+          { title: routes.about.title, href: routes.about.url },
+          { title: routes.contact.title, href: routes.contact.url },
         ]}
         socialLinks={[
           {
-            title: "GitHub",
-            href: "https://github.com/division-group",
+            title: socialLinks.github.title,
+            href: socialLinks.github.url,
             icon: <GitHubLogoIcon />,
           },
         ]}
       />
       <main
         className="
-p-4
-flex
-flex-col
-gap-4
-"
+        flex
+        flex-col
+        gap-4
+        p-4
+        "
       >
         {children}
       </main>
       <footer
         className="
-p-4 
-text-center 
-text-xs 
-relative
-bottom-0
-"
+        text-center 
+        text-xs 
+        relative
+        bottom-0
+        p-4 
+        "
       >
-        <p>&copy; 2024 Div Group</p>
+        <p>
+          &copy; {new Date().getFullYear()} {common.companyName}. {common.allRightsReserved}.
+        </p>
       </footer>
     </div>
   );

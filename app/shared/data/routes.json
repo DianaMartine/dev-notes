@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "Início",
+        "url": "/"
+    },
+    "about": {
+        "title": "Sobre",
+        "url": "/sobre"
+    },
+    "contact": {
+        "title": "Contato",
+        "url": "/contato"
+    }
+}

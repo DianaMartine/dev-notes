@@ -3,7 +3,7 @@
 		{
 			"title": "HTML5",
 			"subtitle": "HyperText Markup Language",
-			"description": "HTML é a linguagem padrão para criar páginas da web.",
+			"description": "O esqueleto do seu projeto web.",
 			"icon": "https://img.shields.io/badge/-%23E34F2600.svg?style=for-the-badge&logo=html5&logoColor=23e34f26",
 			"slug": "html5",
 			"content": [

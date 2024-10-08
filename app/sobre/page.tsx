@@ -1,3 +1,5 @@
+import pages from "@/app/shared/data/pages.json";
+import routes from "@/app/shared/data/routes.json";
 import { IonBreadcrumb } from "../shared/components/ion-breadcrumb/ion-breadcrumb";
 import IonLayout from "../shared/components/ion-layout/ion-layout";
 import { IonPageInfo } from "../shared/components/ion-page-info/ion-page-info";
@@ -8,11 +10,11 @@ export default function About() {
       <IonBreadcrumb
         navLinks={[
           {
-            title: "Home",
-            href: "/",
+            title: routes.home.title,
+            href: routes.home.url,
             nested: [
               {
-                title: "Sobre",
+                title: routes.about.title,
               },
             ],
           },
@@ -20,8 +22,8 @@ export default function About() {
       />
 
       <IonPageInfo
-        title="Sobre"
-        description="Olá Jovem, tudo certo? Esse projeto surgiu de uma ideia de transformar meu caderno de anotações em algo para compartilhar com a comunidade Dev. Aqui você irá encontrar tópicos para estudar de um modo mais fácil e mastigado, pois pra quê complicar mais né? Espero que aproveitem bem esse conteúdo."
+        title={pages.about.title}
+        description={pages.about.description}
       />
     </IonLayout>
   );

@@ -37,29 +37,46 @@ export default function Topics() {
         ]}
       />
 
-      <IonPageInfo
-        title={currentTopic.title}
-        subtitle={currentTopic.subtitle}
-        description={currentTopic.description}
-      />
-
-      <div
-        className="
-grid
-sm:grid-cols-2
-md:grid-cols-3
-lg:grid-cols-4
-gap-4"
-      >
-        {slugData?.content.map((topic, index) => (
-          <IonTopic
-            key={index}
-            title={topic.title}
-            description={topic.description}
-            slug={`${slug}/${topic.slug}`}
+      {
+        currentTopic.title !== "HTML5" && (
+          <IonPageInfo
+            title="Página em construção"
+            subtitle="Em breve mais informações"
+            description="Estamos trabalhando para trazer mais informações sobre este tópico. Volte em breve."
           />
-        ))}
-      </div>
+        )
+      }
+
+      {
+        currentTopic.title === "HTML5" && (
+          <>
+            <IonPageInfo
+              title={currentTopic.title}
+              subtitle={currentTopic.subtitle}
+              description={currentTopic.description}
+            />
+            <div
+              className="
+              md:grid-cols-3
+              lg:grid-cols-4
+              grid
+              gap-4
+              sm:grid-cols-2
+              "
+            >
+              {slugData?.content.map((topic, index) => (
+                <IonTopic
+                  key={index}
+                  title={topic.title}
+                  description={topic.description}
+                  slug={`${slug}/${topic.slug}`}
+                />
+              ))}
+            </div>
+          </>
+        )
+      }
+
     </IonLayout>
   );
 }

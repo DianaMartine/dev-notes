@@ -1,4 +1,5 @@
 import type { HeaderProps } from "@/app/shared/components/types";
+import common from "@/app/shared/data/common.json";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -20,52 +21,63 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
     return (
       <header ref={ref} style={{ backgroundColor: bgColor, color: textColor }}>
         <IonHeading level={1} textColor={textColor}>
-          Dev
-          <span className="text-[#FF66C4]">Dictionary</span>
+          {common.projectMainTitle.split(" ")[0]}{" "}
+          <span className="
+          text-[#FF66C4]
+          "
+          >
+            {common.projectMainTitle.split(" ")[1]}
+          </span>
         </IonHeading>
         <Sheet>
           <SheetTrigger asChild>
             <Button
               size="sm"
               className="
-absolute 
-top-4
-right-4
-sm:right-6
-md:right-8
-lg:right-12
-bg-[#1D0259] 
-hover:bg-[#0D0126] 
-hover:outline 
-hover:outline-[1px] hover:outline-white
-"
+              top-4
+              right-4
+              sm:right-6
+              md:right-8
+              lg:right-12
+              bg-[#1D0259] 
+              hover:bg-[#0D0126] 
+              hover:outline 
+              hover:outline-[1px] hover:outline-white
+              absolute 
+              "
             >
               <HamburgerMenuIcon />
             </Button>
           </SheetTrigger>
-          <SheetContent className="bg-[#1D0259] text-white">
+          <SheetContent className="
+          bg-[#1D0259] 
+          text-white
+          ">
             <SheetHeader>
               <SheetTitle>
                 <IonCaption size="medium" textColor="white">
-                  Dev Dictionary
+                  {common.projectMainTitle}
                 </IonCaption>
               </SheetTitle>
               <SheetDescription
                 className="
-text-[#FF66C4]
-"
+                text-[#FF66C4]
+                "
               >
-                Um dicionário para desenvolvedores
+                {common.projectDescription}
                 <span
                   className="
-mt-8
-flex
-flex-col
-gap-4
-"
+                  flex
+                  flex-col
+                  gap-4
+                  mt-8
+                  "
                 >
                   {navLinks.map((link) => (
-                    <span key={link.title} className="mb-2">
+                    <span key={link.title} className="
+                    mb-2
+                    "
+                    >
                       <Link href={link.href}>
                         <IonCaption size="small" textColor="white">
                           {link.title}
@@ -77,12 +89,28 @@ gap-4
               </SheetDescription>
             </SheetHeader>
             <SheetFooter>
-              <div className="mt-6 flex justify-center items-center">
-                <ul className=" flex gap-2">
+              <div className="
+              mt-6 
+              flex 
+              justify-center 
+              items-center
+              "
+              >
+                <ul className="
+                flex
+                gap-2
+                "
+                >
                   {socialLinks?.map((link) => (
                     <li key={link.title}>
                       <Link href={link.href}>
-                        <Button className="bg-[#FF66C4] hover:bg-[#BB3186] hover:outline hover:outline-[1px] hover:outline-white">
+                        <Button className="
+                        bg-[#FF66C4] 
+                        hover:bg-[#BB3186] 
+                        hover:outline 
+                        hover:outline-[1px] hover:outline-white
+                        "
+                        >
                           {link.icon}
                         </Button>
                       </Link>
@@ -90,9 +118,14 @@ gap-4
                   ))}
                 </ul>
               </div>
-              <div className="absolute bottom-4 right-[calc(50%-70px)]">
+              <div className="
+              absolute 
+              bottom-4 
+              right-[calc(50%-70px)]
+              "
+              >
                 <IonCaption size="medium" textColor="white">
-                  &copy; 2024 Dev Dictionary
+                  &copy; {new Date().getFullYear()} {common.projectMainTitle}.
                 </IonCaption>
               </div>
             </SheetFooter>
