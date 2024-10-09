@@ -9,101 +9,154 @@
 			"content": [
 				{
 					"title": "Introdução",
-					"description": "HTML5 é a versão mais recente do HTML. Com novos elementos, atributos e comportamentos, é uma nova e melhorada versão do HTML.",
+					"description": "O HTML é usado para estruturar o conteúdo de uma página da web. É composto por elementos (tags) que definem a estrutura da página.",
 					"slug": "introducao",
 					"content": [
 						{
-							"title": "História",
-							"description": "HTML5 foi proposto pela primeira vez por Ian Hickson da Google em 2004. Em 2008, a W3C publicou a primeira versão do HTML5.",
-							"slug": "historia"
+							"title": "O que danado é HTML5?",
+							"description": "HTML (HyperText Markup Language - Linguagem de Marcação de Hipertexto) é a linguagem padrão para criar páginas da web. Surgiu em 1991 e é mantido pela W3C (World Wide Web Consortium).",
+							"slug": "o-que"
 						},
 						{
-							"title": "Por que HTML5?",
-							"description": "HTML5 é projetado para tornar a criação de aplicativos web mais fácil e eficiente.",
-							"slug": "por-que"
+							"title": "Onde é usado?",
+							"description": "HTML5 é usado para criar páginas da web. É o esqueleto de um projeto web.",
+							"slug": "onde"
 						},
 						{
-							"title": "Novidades",
-							"description": "HTML5 introduziu muitos novos elementos que ajudam a criar páginas da web mais eficientes.",
-							"slug": "novidades"
+							"title": "Tags",
+							"description": "Tags HTML são usadas para definir elementos HTML. Você pode usar tags HTML para adicionar texto, imagens, links, tabelas, formulários e muito mais.",
+							"slug": "tags"
 						},
 						{
-							"title": "Compatibilidade",
-							"description": "HTML5 é compatível com todos os navegadores modernos.",
-							"slug": "compatibilidade"
-						},
-						{
-							"title": "Estrutura Básica",
-							"description": "A estrutura básica de um documento HTML5 é composta por elementos HTML.",
-							"example": "```html\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Page Title</title>\n\t</head>\n\t<body>\n\t\t<h1>This is a Heading</h1>\n\t\t<p>This is a paragraph.</p>\n\t</body>\n</html>\n```",
-							"slug": "estrutura"
-						},
-						{
-							"title": "Elementos",
-							"description": "Elementos HTML5 são usados para definir a estrutura de uma página da web.",
-							"slug": "elementos"
+							"title": "Exemplo",
+							"description": "A estrutura básica de um documento HTML5 é composta por elementos HTML (tags).",
+							"example": "```html\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Page Title</title>\n\t</head>\n\t<body>\n\t\t<h1>This is a Heading</h1>\n\t\t<p>This is a paragraph.</p>\n\t</body>\n</html>\n\n Explicando o exemplo:\n\n- <!DOCTYPE html> define o tipo de documento HTML5.\n- <html> é o elemento raiz de um documento HTML5.\n- <head> contém metadados para o documento HTML5.\n- <title> define o título do documento HTML5.\n- <body> contém o conteúdo do documento HTML5.\n- <h1> define um cabeçalho de nível 1.\n- <p> define um parágrafo.\n\nVeja nossa seção de tags para mais informações.\n```",
+							"slug": "exemplo"
 						}
 					]
 				},
 				{
 					"title": "HTML5 Tags",
-					"description": "HTML5 tags são usadas para definir elementos HTML.",
+					"description": "Tags HTML5 são usadas para definir elementos HTML.",
 					"slug": "tags",
 					"content": [
 						{
-							"title": "Comments",
-							"description": "Define um comentário no código HTML.",
-							"example": "```html\n<!-- This is a comment -->\n```",
-							"note": "Comentários não são exibidos na página da web.",
-							"slug": "comentario"
+							"title": "Comentários",
+							"description": "Digamos que você queira adicionar um comentário ao seu código HTML. Você pode fazer isso usando a tag de comentário.",
+							"example": "```html\n<!-- Este é um comentário -->\n```",
+							"note": "Nota: Comentários não são exibidos na página da web e são usados para adicionar notas ao código.",
+							"slug": "comentarios"
 						},
 						{
-							"title": "<a>",
-							"description": "Define um hyperlink, que é usado para ligar de uma página para outra.",
-							"example": "```html\n<a\n\thref='https://github.com/division-group'>\n\tThis is a link\n</a>\n```",
-							"note": "O atributo href especifica o URL da página para a qual o link vai.",
-							"result": "<a href='https://github.com/division-group'>This is a link</a>",
+							"title": "Links e Âncoras - <a>",
+							"description": "Se você deseja adicionar um link a uma página da web, você pode usar a tag <a>.",
+							"example": "```html\n<a\n\thref='https://github.com/div-group-official'>\n\tEste é um link, clique aqui\n</a>\n```",
+							"result": "<a href='https://github.com/div-group-official'>Este é um link, clique aqui</a>",
+							"note": "Nota: O atributo <strong>href</strong> especifica o URL da página para a qual o link aponta.",
 							"slug": "a"
 						},
 						{
-							"title": "<abbr>",
-							"description": "Define uma abreviação ou acrônimo.",
-							"example": "```html\n<abbr\n\ttitle='World Health Organization'>\n\tWHO\n</abbr>\n```",
-							"note": "O atributo title especifica o significado da abreviação.",
-							"result": "<abbr title='World Health Organization'>WHO</abbr>",
+							"title": "Abreviações - <abbr>",
+							"description": "Se você deseja adicionar uma abreviação a um texto, você pode usar a tag <abbr>.",
+							"example": "```html\n<abbr\n\ttitle='Div Group'>\n\tDG\n</abbr>\n```",
+							"result": "<abbr title='Div Group'>DG</abbr>",
+							"note": "Nota: O atributo <strong>title</strong> especifica o texto completo da abreviação. Quando o mouse passa sobre a abreviação, o texto completo é exibido.",
 							"slug": "abbr"
 						},
 						{
-							"title": "<address>",
-							"description": "Define informações de contato para o autor/proprietário de um documento ou artigo.",
-							"example": "```html\n<address>\n\tWritten by Div Group.<br>\n\tVisit us at:<br>\n\thttps://github.com/division-group\n</address>\n```",
-							"note": "O elemento <address> deve ser dentro de um elemento <article> ou <body>.",
-							"result": "<address>Written by Div Group.<br>Visit us at:<br>\n\thttps://github.com/division-group</address>",
+							"title": "Endereço - <address>",
+							"description": "Se você deseja adicionar informações de contato a uma página da web, você pode usar a tag <address>.",
+							"example": "```html\n<address>\n\tProjeto: Dev Notes<br>\n\tAutor: Div Group\n</address>\n```",
+							"result": "<address>Projeto: Dev Notes<br>Autor: Div Group</address>",
+							"note": "Nota: O elemento <strong>address</strong> é usado para informações de contato. A tag <strong>br</strong> usada no exemplo serve para quebrar a linha.",
 							"slug": "address"
 						},
 						{
-							"title": "<area>",
-							"description": "Define uma área sensível em um mapa de imagem.",
-							"example": "```html\n<img\n\tsrc='https://github.com/division-group.png'\n\tusemap='#workmap'>\n\n<map name='workmap'>\n\t<area\n\t\tshape='rect'\n\t\tcoords='34,44,270,350'\n\thref='https://github.com/division-group.png'>\n</map>\n```",
-							"note": "O atributo shape especifica a forma da área e o atributo coords especifica as coordenadas da área.",
-							"result": "<img src='https://github.com/division-group.png' usemap='#workmap'><map name='workmap'><area shape='rect' coords='34,44,270,350' href='https://github.com/division-group.png'></map>",
+							"title": "Área Sensível - <area>",
+							"description": "Se você deseja adicionar uma área sensível a uma imagem, você pode usar a tag <area> para definir uma area interativa.",
+							"example": "```html\n<img\n\tsrc='https://github.com/div-group-official.png'\n\tusemap='#area-sensivel'\n\twidth='100'\n>\n\n<map name='area-sensivel'>\n\t<area\n\t\tshape='rect'\n\tcoords='50,50,100,100'\n\thref='https://github.com/div-group-official'\n\t>\n</map>\n```",
+							"result": "<img src='https://github.com/div-group-official.png' usemap='#area-sensivel' width='100'><map name='area-sensivel'><area shape='rect' coords='50,50,100,100' href='https://github.com/div-group-official'></map>",
+							"note": "Nota: No exemplo acima foram usadas as tags <strong>img</strong>, <strong>map</strong> e <strong>area</strong> para criar uma área sensível em uma imagem. O atributo <strong>src</strong> especifica o URL da imagem.<br/><br/> O atributo <strong>usemap</strong> especifica o nome do mapa de imagem a ser usado. O atributo <strong>width</strong> especifica a largura da imagem.<br/><br/> O elemento <strong>map</strong> é usado para criar um mapa de imagem. O atributo <strong>name</strong> especifica o nome do mapa de imagem.<br/><br/> O elemento <strong>area</strong> é usado para definir uma área sensível em uma imagem. O atributo <strong>shape</strong> especifica a forma da área. O atributo <strong>coords</strong> especifica as coordenadas da área. O atributo <strong>href</strong> especifica o URL da página para a qual a área aponta.",
 							"slug": "area"
 						},
 						{
-							"title": "<article>",
-							"description": "Define um artigo.",
-							"example": "```html\n<article>\n\t<h1>Div Group</h1>\n\t<p>Div Group is a web development company.</p>\n</article>\n```",
-							"note": "O elemento <article> é usado para conteúdo independente.",
+							"title": "Artigo - <article>",
+							"description": "Se você deseja adicionar conteúdo independente a uma página da web, você pode usar a tag <article>.",
+							"example": "```html\n<article>\n\t<h1>Div Group</h1>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</article>\n```",
 							"result": "<article><h1>Div Group</h1><p>Div Group is a web development company.</p></article>",
+							"note": "Nota: O elemento <strong>article</strong> é usado para conteúdo independente.<br/><br/> O conteúdo independente deve ser algo que possa ser distribuído separadamente do restante do conteúdo da página, como um post de blog ou um artigo de notícias.<br/><br/> No exemplo acima, foi usado o elemento <strong>article</strong> para criar um artigo, <strong>h1</strong> para o título do artigo e <strong>p</strong> para o conteúdo do artigo.",
 							"slug": "article"
 						},
 						{
-							"title": "<aside>",
-							"description": "Define conteúdo à parte do conteúdo da página.",
-							"example": "```html\n<p>Div Group is a web development company.</p>\n\n<aside>\n\t<h4>Company Information</h4>\n\t<p>Div Group is a web development company.</p>\n</aside>\n```",
-							"note": "O elemento <aside> é usado para conteúdo secundário.",
-							"result": "<p>Div Group is a web development company.</p><aside><h4>Company Information</h4><p>Div Group is a web development company.</p></aside>",
+							"title": "Laterais - <aside>",
+							"description": "Se você deseja adicionar conteúdo secundário a uma página da web, você pode usar a tag <aside>.",
+							"example": "```html\n<span>Div Group</span>\n<aside>\n\t<h4>Informações da Empresa</h4>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</aside>\n```",
+							"result": "<span>Div Group</span><aside><h4>Informações da Empresa</h4><p>Div Group é uma empresa de desenvolvimento web.</p></aside>",
+							"note": "Nota: O elemento <strong>aside</strong> é usado para conteúdo secundário.<br/><br/> O conteúdo secundário deve ser algo que seja relacionado ao conteúdo principal, mas não seja essencial para a compreensão do conteúdo principal.<br/><br/> No exemplo acima, foi usado o elemento <strong>aside</strong> para adicionar informações da empresa ao lado do nome da empresa, <strong>span</strong> para o nome da empresa, <strong>h4</strong> para o título das informações e <strong>p</strong> para o conteúdo das informações.",
 							"slug": "aside"
+						},
+						{
+							"title": "Áudio - <audio>",
+							"description": "Se você deseja adicionar áudio a uma página da web, você pode usar a tag <audio>.",
+							"example": "```html\n<audio\n\tcontrols\n>\n\t<source\n\t\tsrc='https://www.w3schools.com/html/horse.ogg'\n\t\ttype='audio/ogg'\n>\n\t<source\n\t\tsrc='https://www.w3schools.com/html/horse.mp3'\n\ttype='audio/mpeg'\n>\n\tSeu navegador não suporta o elemento de áudio.\n</audio>\n```",
+							"result": "<audio controls><source src='https://www.w3schools.com/html/horse.ogg' type='audio/ogg'><source src='https://www.w3schools.com/html/horse.mp3' type='audio/mpeg'>Seu navegador não suporta o elemento de áudio.</audio>",
+							"note": "Nota: O elemento <strong>audio</strong> é usado para áudio.<br/><br/> O atributo <strong>controls</strong> exibe controles de áudio (como play, pause e volume).<br/><br/> O elemento <strong>source</strong> é usado para especificar várias fontes de áudio. O atributo <strong>src</strong> especifica o URL do arquivo de áudio. O atributo <strong>type</strong> especifica o tipo de arquivo de áudio.<br/><br/> O texto 'Seu navegador não suporta o elemento de áudio.' é exibido se o navegador não suportar o elemento de áudio.",
+							"slug": "audio"
+						},
+						{
+							"title": "Negrito - <b>",
+							"description": "Se você deseja adicionar texto em negrito a uma página da web, você pode usar a tag <b>.",
+							"example": "```html\n<p>\n\tEste é um texto <b>em negrito</b>.\n</p>\n```",
+							"result": "<p>Este é um texto <b>em negrito</b>.</p>",
+							"note": "Nota: No exemplo acima, foi usado o elemento <strong>p</strong> para criar um parágrafo e o elemento <strong>b</strong> para adicionar texto em negrito.",
+							"slug": "b"
+						},
+						{
+							"title": "Base - <base>",
+							"description": "Se você deseja especificar a URL base para todos os links em uma página da web, você pode usar a tag <base>.",
+							"example": "```html\n<base\n\thref='https://www.w3schools.com/'\n\ttarget='_blank'\n>\n```",
+							"note": "Nota: O elemento <strong>base</strong> é usado para especificar a URL base para todos os links em uma página da web.<br/><br/> O atributo <strong>href</strong> especifica a URL base para todos os links.<br/><br/> O atributo <strong>target</strong> especifica o destino padrão para todos os links sendo <strong>_blank</strong> para abrir o link em uma nova janela ou guia.",
+							"slug": "base"
+						},
+						{
+							"title": "Bidirecional - <bdi>",
+							"description": "Se você deseja isolar um pedaço de texto que pode ser formatado de maneira diferente do texto ao redor, você pode usar a tag <bdi>.",
+							"example": "```html\n<p>\n\tUsuário: <bdi>Div Group</bdi>\n</p>\n```",
+							"result": "<p>Usuário: <bdi>Div Group</bdi></p>",
+							"note": "Nota: No exemplo acima, foi usado o elemento <strong>p</strong> para criar um parágrafo e o elemento <strong>bdi</strong> para isolar um pedaço de texto que pode ser formatado de maneira diferente do texto ao redor.",
+							"slug": "bdi"
+						},
+						{
+							"title": "Bidirecional Anulado - <bdo>",
+							"description": "Se você deseja substituir a direção do texto em um elemento, você pode usar a tag <bdo>.",
+							"example": "```html\n<p>\n\t<bdo dir='rtl'>Este é um texto em hebraico.</bdo>\n</p>\n```",
+							"result": "<p><bdo dir='rtl'>Este é um texto em hebraico.</bdo></p>",
+							"note": "Nota: No exemplo acima, foi usado o elemento <strong>p</strong> para criar um parágrafo e o elemento <strong>bdo</strong> para substituir a direção do texto em um elemento. O atributo <strong>dir</strong> especifica a direção do texto sendo <strong>rtl</strong> para direita para esquerda.",
+							"slug": "bdo"
+						},
+						{
+							"title": "Bloco de Citação - <blockquote>",
+							"description": "Se você deseja adicionar uma citação a uma página da web, você pode usar a tag <blockquote>.",
+							"example": "```html\n<blockquote>\n\t<p>\n\t\tA vida é o que acontece enquanto você está ocupado fazendo outros planos.\n\t</p>\n\t<footer>\n\t\tJohn Lennon\n\t</footer>\n</blockquote>\n```",
+							"result": "<blockquote><p>A vida é o que acontece enquanto você está ocupado fazendo outros planos.</p><footer>John Lennon</footer></blockquote>",
+							"note": "Nota: No exemplo acima, foi usado o elemento <strong>blockquote</strong> para adicionar uma citação, <strong>p</strong> para o conteúdo da citação e <strong>footer</strong> para o autor da citação.",
+							"slug": "blockquote"
+						},
+						{
+							"title": "Corpo - <body>",
+							"description": "O elemento <body> é usado para o conteúdo (texto, imagens, links, tabelas, formulários, etc.) de uma página da web.",
+							"example": "```html\n<body>\n\t<h1>Div Group</h1>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</body>\n```",
+							"result": "<body><h1>Div Group</h1><p>Div Group is a web development company.</p></body>",
+							"note": "Nota: No exemplo acima, foi usado o elemento <strong>body</strong> para adicionar o conteúdo de uma página da web, <strong>h1</strong> para o título da página e <strong>p</strong> para o conteúdo da página.<br/><br/> A tag <strong>body</strong> só pode ser usada uma vez em um documento HTML.",
+							"slug": "body"
+						},
+						{
+							"title": "Botão - <button>",
+							"description": "Se você deseja adicionar um botão a uma página da web, você pode usar a tag <button>.",
+							"example": "```html\n<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>\n```",
+							"result": "<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>",
+							"note": "Nota: No exemplo acima, foi usado o elemento <strong>button</strong> para adicionar um botão, o atributo <strong>onclick</strong> para executar um script quando o botão é clicado e a função <strong>alert()</strong> para exibir uma caixa de diálogo com uma mensagem.",
+							"slug": "button"
 						}
 					]
 				}

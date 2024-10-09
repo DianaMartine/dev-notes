@@ -91,7 +91,6 @@ flex
 flex-col
 gap-4
 list-disc
-pl-4
 "
         >
           {contentData?.content?.map((item, index) => (
@@ -141,16 +140,26 @@ gap-2
                 </div>
               )}
               {"result" in item && item.result && (
-                <div>
+                <div
+                className="
+                flex
+                flex-col
+                gap-2
+                "
+                >
                   <IonParagraph size="small">Resultado:</IonParagraph>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: item.result }}
-                    style={{
-                      backgroundColor: "#202020",
-                      padding: "1rem",
-                      borderRadius: "0.5rem",
-                    }}
-                  />
+                    <div
+                      dangerouslySetInnerHTML={{ __html: item.result }}
+                      className={`
+                      bg-[#202020]
+                      p-4
+                      rounded-md
+                      ${item.result.includes("<a>") && `
+                        cursor-pointer
+                        hover:text-[#922AC7]
+                        `}
+                      `}
+                    />
                 </div>
               )}
               {"note" in item && item.note && (
@@ -162,7 +171,9 @@ items-center
 "
                 >
                   <InfoCircledIcon className="w-6 h-6" />
-                  <IonParagraph size="small">{item.note}</IonParagraph>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: item.note }}
+                    />
                 </div>
               )}
               <hr />
