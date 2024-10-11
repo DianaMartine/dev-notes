@@ -62,3 +62,13 @@ export type PageInfoProps = GlobalProps & {
   description: string;
   subtitle?: string;
 };
+
+export type DialogProps = GlobalProps & {
+  triggerLabel: string;
+  title: string;
+  description: string;
+  confirmLabel?: string;
+  cancelLabel?: string;
+  onConfirm?: () => void;
+  onCancel?: () => void;
+};

@@ -44,7 +44,7 @@
 							"title": "Comentários",
 							"description": "Digamos que você queira adicionar um comentário ao seu código HTML. Você pode fazer isso usando a tag de comentário.",
 							"example": "```html\n<!-- Este é um comentário -->\n```",
-							"note": "Nota: Comentários não são exibidos na página da web e são usados para adicionar notas ao código.",
+							"note": "Comentários não são exibidos na página da web e são usados para adicionar notas ao código.",
 							"slug": "comentarios"
 						},
 						{
@@ -52,7 +52,7 @@
 							"description": "Se você deseja adicionar um link a uma página da web, você pode usar a tag <a>.",
 							"example": "```html\n<a\n\thref='https://github.com/div-group-official'>\n\tEste é um link, clique aqui\n</a>\n```",
 							"result": "<a href='https://github.com/div-group-official'>Este é um link, clique aqui</a>",
-							"note": "Nota: O atributo <strong>href</strong> especifica o URL da página para a qual o link aponta.",
+							"note": "O atributo <i><strong>href</strong></i> especifica o URL da página para a qual o link aponta.",
 							"slug": "a"
 						},
 						{
@@ -60,7 +60,7 @@
 							"description": "Se você deseja adicionar uma abreviação a um texto, você pode usar a tag <abbr>.",
 							"example": "```html\n<abbr\n\ttitle='Div Group'>\n\tDG\n</abbr>\n```",
 							"result": "<abbr title='Div Group'>DG</abbr>",
-							"note": "Nota: O atributo <strong>title</strong> especifica o texto completo da abreviação. Quando o mouse passa sobre a abreviação, o texto completo é exibido.",
+							"note": "O atributo <i><strong>title</strong></i> especifica o texto completo da abreviação. Quando o mouse passa sobre a abreviação, o texto completo é exibido.",
 							"slug": "abbr"
 						},
 						{
@@ -68,7 +68,7 @@
 							"description": "Se você deseja adicionar informações de contato a uma página da web, você pode usar a tag <address>.",
 							"example": "```html\n<address>\n\tProjeto: Dev Notes<br>\n\tAutor: Div Group\n</address>\n```",
 							"result": "<address>Projeto: Dev Notes<br>Autor: Div Group</address>",
-							"note": "Nota: O elemento <strong>address</strong> é usado para informações de contato. A tag <strong>br</strong> usada no exemplo serve para quebrar a linha.",
+							"note": "O elemento <i><strong>address</strong></i> é usado para informações de contato. A tag <i><strong>br</strong></i> usada no exemplo serve para quebrar a linha.",
 							"slug": "address"
 						},
 						{
@@ -76,15 +76,15 @@
 							"description": "Se você deseja adicionar uma área sensível a uma imagem, você pode usar a tag <area> para definir uma area interativa.",
 							"example": "```html\n<img\n\tsrc='https://github.com/div-group-official.png'\n\tusemap='#area-sensivel'\n\twidth='100'\n>\n\n<map name='area-sensivel'>\n\t<area\n\t\tshape='rect'\n\tcoords='50,50,100,100'\n\thref='https://github.com/div-group-official'\n\t>\n</map>\n```",
 							"result": "<img src='https://github.com/div-group-official.png' usemap='#area-sensivel' width='100'><map name='area-sensivel'><area shape='rect' coords='50,50,100,100' href='https://github.com/div-group-official'></map>",
-							"note": "Nota: No exemplo acima foram usadas as tags <strong>img</strong>, <strong>map</strong> e <strong>area</strong> para criar uma área sensível em uma imagem. O atributo <strong>src</strong> especifica o URL da imagem.<br/><br/> O atributo <strong>usemap</strong> especifica o nome do mapa de imagem a ser usado. O atributo <strong>width</strong> especifica a largura da imagem.<br/><br/> O elemento <strong>map</strong> é usado para criar um mapa de imagem. O atributo <strong>name</strong> especifica o nome do mapa de imagem.<br/><br/> O elemento <strong>area</strong> é usado para definir uma área sensível em uma imagem. O atributo <strong>shape</strong> especifica a forma da área. O atributo <strong>coords</strong> especifica as coordenadas da área. O atributo <strong>href</strong> especifica o URL da página para a qual a área aponta.",
+							"note": "No exemplo acima foram usadas as tags <i><strong>img</strong></i>, <i><strong>map</strong></i> e <i><strong>area</strong></i> para criar uma área sensível em uma imagem. O atributo <i><strong>src</strong></i> especifica o URL da imagem.<br/><br/> O atributo <i><strong>usemap</strong></i> especifica o nome do mapa de imagem a ser usado. O atributo <i><strong>width</strong></i> especifica a largura da imagem.<br/><br/> O elemento <i><strong>map</strong></i> é usado para criar um mapa de imagem. O atributo <i><strong>name</strong></i> especifica o nome do mapa de imagem.<br/><br/> O elemento <i><strong>area</strong></i> é usado para definir uma área sensível em uma imagem. O atributo <i><strong>shape</strong></i> especifica a forma da área. O atributo <i><strong>coords</strong></i> especifica as coordenadas da área. O atributo <i><strong>href</strong></i> especifica o URL da página para a qual a área aponta.",
 							"slug": "area"
 						},
 						{
 							"title": "Artigo - <article>",
 							"description": "Se você deseja adicionar conteúdo independente a uma página da web, você pode usar a tag <article>.",
 							"example": "```html\n<article>\n\t<h1>Div Group</h1>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</article>\n```",
-							"result": "<article><h1>Div Group</h1><p>Div Group is a web development company.</p></article>",
-							"note": "Nota: O elemento <strong>article</strong> é usado para conteúdo independente.<br/><br/> O conteúdo independente deve ser algo que possa ser distribuído separadamente do restante do conteúdo da página, como um post de blog ou um artigo de notícias.<br/><br/> No exemplo acima, foi usado o elemento <strong>article</strong> para criar um artigo, <strong>h1</strong> para o título do artigo e <strong>p</strong> para o conteúdo do artigo.",
+							"result": "<article><h1>Div Group</h1><p>Div Group é uma empresa de desenvolvimento web.</p></article>",
+							"note": "O elemento <i><strong>article</strong></i> é usado para conteúdo independente.<br/><br/> O conteúdo independente deve ser algo que possa ser distribuído separadamente do restante do conteúdo da página, como um post de blog ou um artigo de notícias.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>article</strong></i> para criar um artigo, <i><strong>h1</strong></i> para o título do artigo e <i><strong>p</strong></i> para o conteúdo do artigo.",
 							"slug": "article"
 						},
 						{
@@ -92,7 +92,7 @@
 							"description": "Se você deseja adicionar conteúdo secundário a uma página da web, você pode usar a tag <aside>.",
 							"example": "```html\n<span>Div Group</span>\n<aside>\n\t<h4>Informações da Empresa</h4>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</aside>\n```",
 							"result": "<span>Div Group</span><aside><h4>Informações da Empresa</h4><p>Div Group é uma empresa de desenvolvimento web.</p></aside>",
-							"note": "Nota: O elemento <strong>aside</strong> é usado para conteúdo secundário.<br/><br/> O conteúdo secundário deve ser algo que seja relacionado ao conteúdo principal, mas não seja essencial para a compreensão do conteúdo principal.<br/><br/> No exemplo acima, foi usado o elemento <strong>aside</strong> para adicionar informações da empresa ao lado do nome da empresa, <strong>span</strong> para o nome da empresa, <strong>h4</strong> para o título das informações e <strong>p</strong> para o conteúdo das informações.",
+							"note": "O elemento <i><strong>aside</strong></i> é usado para conteúdo secundário.<br/><br/> O conteúdo secundário deve ser algo que seja relacionado ao conteúdo principal, mas não seja essencial para a compreensão do conteúdo principal.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>aside</strong></i> para adicionar informações da empresa ao lado do nome da empresa, <i><strong>span</strong></i> para o nome da empresa, <i><strong>h4</strong></i> para o título das informações e <i><strong>p</strong></i> para o conteúdo das informações.",
 							"slug": "aside"
 						},
 						{
@@ -100,7 +100,7 @@
 							"description": "Se você deseja adicionar áudio a uma página da web, você pode usar a tag <audio>.",
 							"example": "```html\n<audio\n\tcontrols\n>\n\t<source\n\t\tsrc='https://www.w3schools.com/html/horse.ogg'\n\t\ttype='audio/ogg'\n>\n\t<source\n\t\tsrc='https://www.w3schools.com/html/horse.mp3'\n\ttype='audio/mpeg'\n>\n\tSeu navegador não suporta o elemento de áudio.\n</audio>\n```",
 							"result": "<audio controls><source src='https://www.w3schools.com/html/horse.ogg' type='audio/ogg'><source src='https://www.w3schools.com/html/horse.mp3' type='audio/mpeg'>Seu navegador não suporta o elemento de áudio.</audio>",
-							"note": "Nota: O elemento <strong>audio</strong> é usado para áudio.<br/><br/> O atributo <strong>controls</strong> exibe controles de áudio (como play, pause e volume).<br/><br/> O elemento <strong>source</strong> é usado para especificar várias fontes de áudio. O atributo <strong>src</strong> especifica o URL do arquivo de áudio. O atributo <strong>type</strong> especifica o tipo de arquivo de áudio.<br/><br/> O texto 'Seu navegador não suporta o elemento de áudio.' é exibido se o navegador não suportar o elemento de áudio.",
+							"note": "O elemento <i><strong>audio</strong></i> é usado para áudio.<br/><br/> O atributo <i><strong>controls</strong></i> exibe controles de áudio (como play, pause e volume).<br/><br/> O elemento <i><strong>source</strong></i> é usado para especificar várias fontes de áudio. O atributo <i><strong>src</strong></i> especifica o URL do arquivo de áudio. O atributo <i><strong>type</strong></i> especifica o tipo de arquivo de áudio.<br/><br/> O texto 'Seu navegador não suporta o elemento de áudio.' é exibido se o navegador não suportar o elemento de áudio.",
 							"slug": "audio"
 						},
 						{
@@ -108,14 +108,14 @@
 							"description": "Se você deseja adicionar texto em negrito a uma página da web, você pode usar a tag <b>.",
 							"example": "```html\n<p>\n\tEste é um texto <b>em negrito</b>.\n</p>\n```",
 							"result": "<p>Este é um texto <b>em negrito</b>.</p>",
-							"note": "Nota: No exemplo acima, foi usado o elemento <strong>p</strong> para criar um parágrafo e o elemento <strong>b</strong> para adicionar texto em negrito.",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>b</strong></i> para adicionar texto em negrito.",
 							"slug": "b"
 						},
 						{
 							"title": "Base - <base>",
 							"description": "Se você deseja especificar a URL base para todos os links em uma página da web, você pode usar a tag <base>.",
-							"example": "```html\n<base\n\thref='https://www.w3schools.com/'\n\ttarget='_blank'\n>\n```",
-							"note": "Nota: O elemento <strong>base</strong> é usado para especificar a URL base para todos os links em uma página da web.<br/><br/> O atributo <strong>href</strong> especifica a URL base para todos os links.<br/><br/> O atributo <strong>target</strong> especifica o destino padrão para todos os links sendo <strong>_blank</strong> para abrir o link em uma nova janela ou guia.",
+							"example": "```html\n<base\n\thref='https://github.com/div-group-official'\n\ttarget='_blank'\n>\n```",
+							"note": "O elemento <i><strong>base</strong></i> é usado para especificar a URL base para todos os links em uma página da web.<br/><br/> O atributo <i><strong>href</strong></i> especifica a URL base para todos os links.<br/><br/> O atributo <i><strong>target</strong></i> especifica o destino padrão para todos os links sendo <i><strong>_blank</strong></i> para abrir o link em uma nova janela ou guia.",
 							"slug": "base"
 						},
 						{
@@ -123,7 +123,7 @@
 							"description": "Se você deseja isolar um pedaço de texto que pode ser formatado de maneira diferente do texto ao redor, você pode usar a tag <bdi>.",
 							"example": "```html\n<p>\n\tUsuário: <bdi>Div Group</bdi>\n</p>\n```",
 							"result": "<p>Usuário: <bdi>Div Group</bdi></p>",
-							"note": "Nota: No exemplo acima, foi usado o elemento <strong>p</strong> para criar um parágrafo e o elemento <strong>bdi</strong> para isolar um pedaço de texto que pode ser formatado de maneira diferente do texto ao redor.",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>bdi</strong></i> para isolar um pedaço de texto que pode ser formatado de maneira diferente do texto ao redor.",
 							"slug": "bdi"
 						},
 						{
@@ -131,7 +131,7 @@
 							"description": "Se você deseja substituir a direção do texto em um elemento, você pode usar a tag <bdo>.",
 							"example": "```html\n<p>\n\t<bdo dir='rtl'>Este é um texto em hebraico.</bdo>\n</p>\n```",
 							"result": "<p><bdo dir='rtl'>Este é um texto em hebraico.</bdo></p>",
-							"note": "Nota: No exemplo acima, foi usado o elemento <strong>p</strong> para criar um parágrafo e o elemento <strong>bdo</strong> para substituir a direção do texto em um elemento. O atributo <strong>dir</strong> especifica a direção do texto sendo <strong>rtl</strong> para direita para esquerda.",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>bdo</strong></i> para substituir a direção do texto em um elemento. O atributo <i><strong>dir</strong></i> especifica a direção do texto sendo <i><strong>rtl</strong></i> para direita para esquerda.",
 							"slug": "bdo"
 						},
 						{
@@ -139,15 +139,15 @@
 							"description": "Se você deseja adicionar uma citação a uma página da web, você pode usar a tag <blockquote>.",
 							"example": "```html\n<blockquote>\n\t<p>\n\t\tA vida é o que acontece enquanto você está ocupado fazendo outros planos.\n\t</p>\n\t<footer>\n\t\tJohn Lennon\n\t</footer>\n</blockquote>\n```",
 							"result": "<blockquote><p>A vida é o que acontece enquanto você está ocupado fazendo outros planos.</p><footer>John Lennon</footer></blockquote>",
-							"note": "Nota: No exemplo acima, foi usado o elemento <strong>blockquote</strong> para adicionar uma citação, <strong>p</strong> para o conteúdo da citação e <strong>footer</strong> para o autor da citação.",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>blockquote</strong></i> para adicionar uma citação, <i><strong>p</strong></i> para o conteúdo da citação e <i><strong>footer</strong></i> para o autor da citação.",
 							"slug": "blockquote"
 						},
 						{
 							"title": "Corpo - <body>",
 							"description": "O elemento <body> é usado para o conteúdo (texto, imagens, links, tabelas, formulários, etc.) de uma página da web.",
 							"example": "```html\n<body>\n\t<h1>Div Group</h1>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</body>\n```",
-							"result": "<body><h1>Div Group</h1><p>Div Group is a web development company.</p></body>",
-							"note": "Nota: No exemplo acima, foi usado o elemento <strong>body</strong> para adicionar o conteúdo de uma página da web, <strong>h1</strong> para o título da página e <strong>p</strong> para o conteúdo da página.<br/><br/> A tag <strong>body</strong> só pode ser usada uma vez em um documento HTML.",
+							"result": "<body><h1>Div Group</h1><p>Div Group é uma empresa de desenvolvimento web.</p></body>",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>body</strong></i> para adicionar o conteúdo de uma página da web, <i><strong>h1</strong></i> para o título da página e <i><strong>p</strong></i> para o conteúdo da página.<br/><br/> A tag <i><strong>body</strong></i> só pode ser usada uma vez em um documento HTML.",
 							"slug": "body"
 						},
 						{
@@ -155,8 +155,136 @@
 							"description": "Se você deseja adicionar um botão a uma página da web, você pode usar a tag <button>.",
 							"example": "```html\n<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>\n```",
 							"result": "<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>",
-							"note": "Nota: No exemplo acima, foi usado o elemento <strong>button</strong> para adicionar um botão, o atributo <strong>onclick</strong> para executar um script quando o botão é clicado e a função <strong>alert()</strong> para exibir uma caixa de diálogo com uma mensagem.",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>button</strong></i> para adicionar um botão, o atributo <i><strong>onclick</strong></i> para executar um script quando o botão é clicado e a função <i><strong>alert()</strong></i> para exibir uma caixa de diálogo com uma mensagem.",
 							"slug": "button"
+						},
+						{
+							"title": "Canvas - <canvas>",
+							"description": "Se você deseja desenhar gráficos, gráficos ou animações em uma página da web, você pode usar a tag <canvas>.",
+							"example": "```html\n<canvas\n\tid='myCanvas'\n\twidth='100'\n\theight='100'\n\tstyle='border:1px solid #fff;'\n>\n\tSeu navegador não suporta o elemento de canvas.\n</canvas>\n```",
+							"result": "<canvas id='myCanvas' width='100' height='100' style='border:1px solid #fff;'>Seu navegador não suporta o elemento de canvas.</canvas>",
+							"note": "O elemento <i><strong>canvas</strong></i> é usado para desenhar gráficos, gráficos ou animações.<br/><br/> O atributo <i><strong>id</strong></i> especifica um ID para o elemento. O atributo <i><strong>width</strong></i> especifica a largura do elemento. O atributo <i><strong>height</strong></i> especifica a altura do elemento. O atributo <i><strong>style</strong></i> especifica o estilo do elemento.<br/><br/> O texto 'Seu navegador não suporta o elemento de canvas.' é exibido se o navegador não suportar o elemento de canvas.",
+							"slug": "canvas"
+						},
+						{
+							"title": "Legenda de Campo - <caption>",
+							"description": "Se você deseja adicionar uma legenda a uma tabela, você pode usar a tag <caption>.",
+							"example": "```html\n<table>\n\t<caption>Lista de Tarefas</caption>\n\t<tr>\n\t\t<th>Tarefa</th>\n\t\t<th>Prioridade</th>\n\t</tr>\n\t<tr>\n\t\t<td>Estudar HTML</td>\n\t\t<td>Alta</td>\n\t</tr>\n</table>\n```",
+							"result": "<table><caption>Lista de Tarefas</caption><tr><th>Tarefa</th><th>Prioridade</th></tr><tr><td>Estudar HTML</td><td>Alta</td></tr></table>",
+							"note": "O elemento <i><strong>caption</strong></i> é usado para adicionar uma legenda a uma tabela.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>table</strong></i> para criar uma tabela, <i><strong>caption</strong></i> para adicionar uma legenda à tabela, <i><strong>tr</strong></i> para adicionar uma linha à tabela, <i><strong>th</strong></i> para adicionar um cabeçalho de coluna à tabela, <i><strong>td</strong></i> para adicionar uma célula à tabela.",
+							"slug": "caption"
+						},
+						{
+							"title": "Citação - <cite>",
+							"description": "Se você deseja adicionar o título de um trabalho a uma página da web, você pode usar a tag <cite>.",
+							"example": "```html\n<p>\n\tMeu livro favorito é <cite>O Código Da Vinci</cite>.\n</p>\n```",
+							"result": "<p>Meu livro favorito é <cite>O Código Da Vinci</cite>.</p>",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>cite</strong></i> para adicionar o título de um trabalho.",
+							"slug": "cite"
+						},
+						{
+							"title": "Código - <code>",
+							"description": "Se você deseja adicionar código a uma página da web, você pode usar a tag <code>.",
+							"example": "```html\n<p>\n\tUse o comando <code>git clone</code> para clonar um repositório.\n</p>\n```",
+							"result": "<p>Use o comando <code>git clone</code> para clonar um repositório.</p>",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>code</strong></i> para adicionar código.",
+							"slug": "code"
+						},
+						{
+							"title": "Coluna - <col>",
+							"description": "Se você deseja definir propriedades para uma ou mais colunas em uma tabela, você pode usar a tag <col>.",
+							"example": "```html\n<table>\n\t<colgroup>\n\t\t<col span='2'>\n\t</colgroup>\n\t<tr>\n\t\t<th>Tarefa</th>\n\t\t<th>Prioridade</th>\n\t</tr>\n\t<tr>\n\t\t<td>Estudar HTML</td>\n\t\t<td>Alta</td>\n\t</tr>\n</table>\n```",
+							"result": "<table><colgroup><col span='2'></colgroup><tr><th>Tarefa</th><th>Prioridade</th></tr><tr><td>Estudar HTML</td><td>Alta</td></tr></table>",
+							"note": "O elemento <i><strong>col</strong></i> é usado para definir propriedades para uma ou mais colunas em uma tabela.<br/><br/> O atributo <i><strong>span</strong></i> especifica o número de colunas a serem afetadas. O atributo <i><strong>style</strong></i> especifica o estilo das colunas.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>table</strong></i> para criar uma tabela, <i><strong>colgroup</strong></i> para agrupar colunas em uma tabela, <i><strong>col</strong></i> para definir propriedades para as colunas, <i><strong>tr</strong></i> para adicionar uma linha à tabela, <i><strong>th</strong></i> para adicionar um cabeçalho de coluna à tabela, <i><strong>td</strong></i> para adicionar uma célula à tabela.",
+							"slug": "col"
+						},
+						{
+							"title": "Grupo de Colunas - <colgroup>",
+							"description": "Se você deseja agrupar colunas em uma tabela, você pode usar a tag <colgroup>.",
+							"example": "```html\n<table>\n\t<colgroup>\n\t\t<col span='2'>\n\t</colgroup>\n\t<tr>\n\t\t<th>Tarefa</th>\n\t\t<th>Prioridade</th>\n\t</tr>\n\t<tr>\n\t\t<td>Estudar HTML</td>\n\t\t<td>Alta</td>\n\t</tr>\n</table>\n```",
+							"result": "<table><colgroup><col span='2'></colgroup><tr><th>Tarefa</th><th>Prioridade</th></tr><tr><td>Estudar HTML</td><td>Alta</td></tr></table>",
+							"note": "O elemento <i><strong>colgroup</strong></i> é usado para agrupar colunas em uma tabela.<br/><br/> O atributo <i><strong>span</strong></i> especifica o número de colunas a serem afetadas. O atributo <i><strong>style</strong></i> especifica o estilo das colunas.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>table</strong></i> para criar uma tabela, <i><strong>colgroup</strong></i> para agrupar colunas em uma tabela, <i><strong>col</strong></i> para definir propriedades para as colunas, <i><strong>tr</strong></i> para adicionar uma linha à tabela, <i><strong>th</strong></i> para adicionar um cabeçalho de coluna à tabela, <i><strong>td</strong></i> para adicionar uma célula à tabela.",
+							"slug": "colgroup"
+						},
+						{
+							"title": "Data - <data>",
+							"description": "É usado para adicionar valor para um determinado conteúdo.",
+							"example": "```html\n<p>\n\tO preço do café é <data value='3.50'>R$ 3,50</data>.\n</p>\n```",
+							"result": "<p>O preço do café é <data value='3.50'>R$ 3,50</data>.</p>",
+							"note": "O elemento <i><strong>data</strong></i> é usado para adicionar valor para um determinado conteúdo.<br/><br/> O atributo <i><strong>value</strong></i> especifica o valor do conteúdo.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>data</strong></i> para adicionar valor ao preço do café.",
+							"slug": "data"
+						},
+						{
+							"title": "Lista de dados - <datalist>",
+							"description": "Se você deseja adicionar uma lista de opções a um campo de entrada, você pode usar a tag <datalist>.",
+							"example": "```html\n<label for='language'>Escolha uma linguagem:</label>\n<input\n\tlist='languages'\n\tid='language'\n\tname='language'\n>\n<datalist id='languages'>\n\t<option value='HTML'>\n\t<option value='CSS'>\n\t<option value='JavaScript'>\n\t<option value='Python'>\n\t<option value='Java'>\n</datalist>\n```",
+							"result": "<label for='language'>Escolha uma linguagem:</label><input list='languages' id='language' name='language'><datalist id='languages'><option value='HTML'><option value='CSS'><option value='JavaScript'><option value='Python'><option value='Java'></datalist>",
+							"note": "O elemento <i><strong>datalist</strong></i> é usado para adicionar uma lista de opções a um campo de entrada.<br/><br/> O atributo <i><strong>list</strong></i> especifica o ID do elemento <i><strong>datalist</strong></i>. O atributo <i><strong>id</strong></i> especifica um ID para o elemento. O atributo <i><strong>name</strong></i> especifica o nome do elemento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>label</strong></i> para adicionar um rótulo ao campo de entrada, <i><strong>input</strong></i> para criar um campo de entrada, <i><strong>datalist</strong></i> para adicionar uma lista de opções ao campo de entrada e <i><strong>option</strong></i> para adicionar opções à lista.",
+							"slug": "datalist"
+						},
+						{
+							"title": "Definição - <dd>",
+							"description": "Se você deseja adicionar uma descrição a uma lista de definição, você pode usar a tag <dd>.",
+							"example": "```html\n<dl>\n\t<dt>HTML</dt>\n\t<dd>Linguagem de Marcação de Hipertexto</dd>\n\t<dt>CSS</dt>\n\t<dd>Folhas de Estilo em Cascata</dd>\n</dl>\n```",
+							"result": "<dl><dt>HTML</dt><dd>Linguagem de Marcação de Hipertexto</dd><dt>CSS</dt><dd>Folhas de Estilo em Cascata</dd></dl>",
+							"note": "O elemento <i><strong>dd</strong></i> é usado para adicionar uma descrição a uma lista de definição.<br/><br/> O elemento <i><strong>dl</strong></i> é usado para criar uma lista de definição. O elemento <i><strong>dt</strong></i> é usado para adicionar um termo à lista de definição.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dl</strong></i> para criar uma lista de definição, <i><strong>dt</strong></i> para adicionar um termo à lista de definição e <i><strong>dd</strong></i> para adicionar uma descrição à lista de definição.",
+							"slug": "dd"
+						},
+						{
+							"title": "Deletado - <del>",
+							"description": "Se você deseja adicionar texto deletado a uma página da web, você pode usar a tag <del>.",
+							"example": "```html\n<p>\n\tO texto <del>deletado</del> foi removido.\n</p>\n```",
+							"result": "<p>O texto <del>deletado</del> foi removido.</p>",
+							"note": "O elemento <i><strong>del</strong></i> é usado para adicionar texto deletado a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>del</strong></i> para adicionar texto deletado.",
+							"slug": "del"
+						},
+						{
+							"title": "Detalhes - <details>",
+							"description": "Se você deseja adicionar detalhes a um resumo em uma página da web, você pode usar a tag <details>.",
+							"example": "```html\n<details>\n\t<summary>Detalhes</summary>\n\t<p>Os detalhes são importantes.</p>\n</details>\n```",
+							"result": "<details><summary>Detalhes</summary><p>Os detalhes são importantes.</p></details>",
+							"note": "O elemento <i><strong>details</strong></i> é usado para adicionar detalhes a um resumo em uma página da web.<br/><br/> O elemento <i><strong>summary</strong></i> é usado para adicionar um resumo aos detalhes.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>details</strong></i> para adicionar detalhes a um resumo, <i><strong>summary</strong></i> para adicionar um resumo aos detalhes e <i><strong>p</strong></i> para adicionar conteúdo aos detalhes.",
+							"slug": "details"
+						},
+						{
+							"title": "Definição de Termo - <dfn>",
+							"description": "Se você deseja adicionar a definição de um termo a uma página da web, você pode usar a tag <dfn>.",
+							"example": "```html\n<p>\n\tO <dfn>HTML</dfn> é uma linguagem de marcação de hipertexto.\n</p>\n```",
+							"result": "<p>O <dfn>HTML</dfn> é uma linguagem de marcação de hipertexto.</p>",
+							"note": "O elemento <i><strong>dfn</strong></i> é usado para adicionar a definição de um termo a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>dfn</strong></i> para adicionar a definição de um termo.",
+							"slug": "dfn"
+						},
+						{
+							"title": "Diálogo - <dialog>",
+							"description": "Se você deseja adicionar um diálogo a uma página da web, você pode usar a tag <dialog>.",
+							"example": "```html\n<dialog open>\n\t<p>Este é um diálogo.</p>\n</dialog>\n```",
+							"result": " <IonDialog/>",
+							"note": "O elemento <i><strong>dialog</strong></i> é usado para adicionar um diálogo a uma página da web.<br/><br/> O atributo <i><strong>open</strong></i> exibe o diálogo aberto.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dialog</strong></i> para adicionar um diálogo à página, <i><strong>p</strong></i> para adicionar conteúdo ao diálogo.",
+							"slug": "dialog"
+						},
+						{
+							"title": "Divisão - <div>",
+							"description": "Se você deseja agrupar elementos em uma página da web, você pode usar a tag <div>.",
+							"example": "```html\n<div>\n\t<h1>Div Group</h1>\n\t<p>Div Group é uma empresa de desenvolvimento web.</p>\n</div>\n```",
+							"result": "<div><h1>Div Group</h1><p>Div Group é uma empresa de desenvolvimento web.</p></div>",
+							"note": "O elemento <i><strong>div</strong></i> é usado para agrupar elementos em uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>div</strong></i> para agrupar um título e um parágrafo.",
+							"slug": "div"
+						},
+						{
+							"title": "Lista de Definição - <dl>",
+							"description": "Se você deseja adicionar uma lista de definição a uma página da web, você pode usar a tag <dl>.",
+							"example": "```html\n<dl>\n\t<dt>HTML</dt>\n\t<dd>Linguagem de Marcação de Hipertexto</dd>\n\t<dt>CSS</dt>\n\t<dd>Folhas de Estilo em Cascata</dd>\n</dl>\n```",
+							"result": "<dl><dt>HTML</dt><dd>Linguagem de Marcação de Hipertexto</dd><dt>CSS</dt><dd>Folhas de Estilo em Cascata</dd></dl>",
+							"note": "O elemento <i><strong>dl</strong></i> é usado para adicionar uma lista de definição a uma página da web.<br/><br/> O elemento <i><strong>dt</strong></i> é usado para adicionar um termo à lista de definição. O elemento <i><strong>dd</strong></i> é usado para adicionar uma descrição à lista de definição.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dl</strong></i> para criar uma lista de definição, <i><strong>dt</strong></i> para adicionar um termo à lista de definição e <i><strong>dd</strong></i> para adicionar uma descrição à lista de definição.",
+							"slug": "dl"
+						},
+						{
+							"title": "Lista de Definição de Termos - <dt>",
+							"description": "Se você deseja adicionar um termo a uma lista de definição, você pode usar a tag <dt>.",
+							"example": "```html\n<dl>\n\t<dt>HTML</dt>\n\t<dd>Linguagem de Marcação de Hipertexto</dd>\n\t<dt>CSS</dt>\n\t<dd>Folhas de Estilo em Cascata</dd>\n</dl>\n```",
+							"result": "<dl><dt>HTML</dt><dd>Linguagem de Marcação de Hipertexto</dd><dt>CSS</dt><dd>Folhas de Estilo em Cascata</dd></dl>",
+							"note": "O elemento <i><strong>dt</strong></i> é usado para adicionar um termo a uma lista de definição.<br/><br/> O elemento <i><strong>dl</strong></i> é usado para criar uma lista de definição. O elemento <i><strong>dd</strong></i> é usado para adicionar uma descrição à lista de definição.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dl</strong></i> para criar uma lista de definição, <i><strong>dt</strong></i> para adicionar um termo à lista de definição e <i><strong>dd</strong></i> para adicionar uma descrição à lista de definição.",
+							"slug": "dt"
 						}
 					]
 				}

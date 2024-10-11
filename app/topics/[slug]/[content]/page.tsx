@@ -1,5 +1,6 @@
 "use client";
 import { IonBreadcrumb } from "@/app/shared/components/ion-breadcrumb/ion-breadcrumb";
+import { IonDialog } from "@/app/shared/components/ion-dialog/ion-dialog";
 import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
 import { IonPageInfo } from "@/app/shared/components/ion-page-info/ion-page-info";
 import { IonHeading } from "@/app/shared/components/typo/ion-heading/ion-heading";
@@ -141,39 +142,64 @@ gap-2
               )}
               {"result" in item && item.result && (
                 <div
-                className="
+                  className="
                 flex
                 flex-col
                 gap-2
                 "
                 >
-                  <IonParagraph size="small">Resultado:</IonParagraph>
-                    <div
-                      dangerouslySetInnerHTML={{ __html: item.result }}
-                      className={`
-                      bg-[#202020]
-                      p-4
-                      rounded-md
-                      ${item.result.includes("<a>") && `
-                        cursor-pointer
-                        hover:text-[#922AC7]
-                        `}
-                      `}
-                    />
+                   {
+                    item.result.includes("<IonDialog/>") && (
+                      <>
+                      <IonParagraph size="small">Clique no texto abaixo para ver o resultado:</IonParagraph>
+                      <IonDialog
+                        triggerLabel="Clique aqui para ver o resultado"
+                        title="Resultado"
+                        description={item.example.split("<p>")[1].split("</p>")[0]} />
+                      </>
+                    )
+                  }
+
+              {
+                    !item.result.includes("<IonDialog/>") && (
+                      <>
+                      <IonParagraph size="small">Resultado:</IonParagraph>
+                      <div
+                        dangerouslySetInnerHTML={{ __html: item.result }}
+                        className={`
+                          bg-[#202020]
+                          p-4
+                          rounded-md
+                          ${item.result.includes("<a>") && `
+                            cursor-pointer
+                            hover:text-[#922AC7]
+                            `}
+                          `}
+                      />
+                      </>
+                    )
+                  }
                 </div>
               )}
               {"note" in item && item.note && (
                 <div
                   className="
-flex
-gap-2
-items-center
-"
+                  flex
+                  flex-col
+                  gap-2
+                  "
                 >
-                  <InfoCircledIcon className="w-6 h-6" />
-                    <div
-                      dangerouslySetInnerHTML={{ __html: item.note }}
-                    />
+                  <div className="
+                  flex
+                  gap-2
+                  items-center
+                  ">
+                    <InfoCircledIcon />
+                    <IonParagraph size="small">Nota:</IonParagraph>
+                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: item.note }}
+                  />
                 </div>
               )}
               <hr />
