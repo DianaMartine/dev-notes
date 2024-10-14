@@ -65,40 +65,43 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
                 "
               >
                 {common.projectDescription}
-                <span
-                  className="
-                  flex
-                  flex-col
-                  gap-4
-                  mt-8
-                  "
-                >
-                  {navLinks.map((link) => (
-                    <span key={link.title} className="
-                    mb-2
-                    "
-                    >
-                      <Link href={link.href}>
-                        <IonCaption size="small" textColor="white">
-                          {link.title}
-                        </IonCaption>
-                      </Link>
-                    </span>
-                  ))}
-                </span>
               </SheetDescription>
             </SheetHeader>
-            <SheetFooter>
+            <div className="
+            grid
+            gap-2
+            mt-6
+            justify-center
+            items-center
+            text-center
+            md:justify-start
+            md:text-left
+            "
+            >
+              {navLinks?.map((link) => (
+                <Link key={link.title} href={link.href} className="
+                hover:text-[#FF66C4]
+                ">
+                  {link.title}
+                </Link>
+              ))}
+            </div>
+            <SheetFooter className="
+            flex
+            justify-center
+            items-center
+            w-full
+            h-16
+            md:justify-between
+            ">
               <div className="
-              mt-6 
-              flex 
-              justify-center 
-              items-center
+              flex
+              gap-4
               "
               >
                 <ul className="
                 flex
-                gap-2
+                gap-4
                 "
                 >
                   {socialLinks?.map((link) => (
@@ -119,9 +122,11 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
                 </ul>
               </div>
               <div className="
-              absolute 
-              bottom-4 
-              right-[calc(50%-70px)]
+              absolute
+              bottom-4
+              left-1/2
+              transform
+              -translate-x-1/2
               "
               >
                 <IonCaption size="medium" textColor="white">

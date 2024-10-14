@@ -154,7 +154,8 @@
 							"title": "Botão - <button>",
 							"description": "Se você deseja adicionar um botão a uma página da web, você pode usar a tag <button>.",
 							"example": "```html\n<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>\n```",
-							"result": "<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>",
+							"result": "<IonAlertDialog/>",
+							"resultDescription": "Clique em mim",
 							"note": "No exemplo acima, foi usado o elemento <i><strong>button</strong></i> para adicionar um botão, o atributo <i><strong>onclick</strong></i> para executar um script quando o botão é clicado e a função <i><strong>alert()</strong></i> para exibir uma caixa de diálogo com uma mensagem.",
 							"slug": "button"
 						},
@@ -218,7 +219,30 @@
 							"title": "Lista de dados - <datalist>",
 							"description": "Se você deseja adicionar uma lista de opções a um campo de entrada, você pode usar a tag <datalist>.",
 							"example": "```html\n<label for='language'>Escolha uma linguagem:</label>\n<input\n\tlist='languages'\n\tid='language'\n\tname='language'\n>\n<datalist id='languages'>\n\t<option value='HTML'>\n\t<option value='CSS'>\n\t<option value='JavaScript'>\n\t<option value='Python'>\n\t<option value='Java'>\n</datalist>\n```",
-							"result": "<label for='language'>Escolha uma linguagem:</label><input list='languages' id='language' name='language'><datalist id='languages'><option value='HTML'><option value='CSS'><option value='JavaScript'><option value='Python'><option value='Java'></datalist>",
+							"result": "<IonCombobox/>",
+							"resultLabel": "Escolha uma linguagem:",
+							"resultOptions": [
+								{
+									"label": "HTML",
+									"value": "HTML"
+								},
+								{
+									"label": "CSS",
+									"value": "CSS"
+								},
+								{
+									"label": "JavaScript",
+									"value": "JavaScript"
+								},
+								{
+									"label": "Python",
+									"value": "Python"
+								},
+								{
+									"label": "Java",
+									"value": "Java"
+								}
+							],
 							"note": "O elemento <i><strong>datalist</strong></i> é usado para adicionar uma lista de opções a um campo de entrada.<br/><br/> O atributo <i><strong>list</strong></i> especifica o ID do elemento <i><strong>datalist</strong></i>. O atributo <i><strong>id</strong></i> especifica um ID para o elemento. O atributo <i><strong>name</strong></i> especifica o nome do elemento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>label</strong></i> para adicionar um rótulo ao campo de entrada, <i><strong>input</strong></i> para criar um campo de entrada, <i><strong>datalist</strong></i> para adicionar uma lista de opções ao campo de entrada e <i><strong>option</strong></i> para adicionar opções à lista.",
 							"slug": "datalist"
 						},
@@ -259,6 +283,7 @@
 							"description": "Se você deseja adicionar um diálogo a uma página da web, você pode usar a tag <dialog>.",
 							"example": "```html\n<dialog open>\n\t<p>Este é um diálogo.</p>\n</dialog>\n```",
 							"result": " <IonDialog/>",
+							"resultDescription": "Este é um diálogo.",
 							"note": "O elemento <i><strong>dialog</strong></i> é usado para adicionar um diálogo a uma página da web.<br/><br/> O atributo <i><strong>open</strong></i> exibe o diálogo aberto.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dialog</strong></i> para adicionar um diálogo à página, <i><strong>p</strong></i> para adicionar conteúdo ao diálogo.",
 							"slug": "dialog"
 						},
@@ -285,6 +310,61 @@
 							"result": "<dl><dt>HTML</dt><dd>Linguagem de Marcação de Hipertexto</dd><dt>CSS</dt><dd>Folhas de Estilo em Cascata</dd></dl>",
 							"note": "O elemento <i><strong>dt</strong></i> é usado para adicionar um termo a uma lista de definição.<br/><br/> O elemento <i><strong>dl</strong></i> é usado para criar uma lista de definição. O elemento <i><strong>dd</strong></i> é usado para adicionar uma descrição à lista de definição.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dl</strong></i> para criar uma lista de definição, <i><strong>dt</strong></i> para adicionar um termo à lista de definição e <i><strong>dd</strong></i> para adicionar uma descrição à lista de definição.",
 							"slug": "dt"
+						},
+						{
+							"title": "Destaque - <em>",
+							"description": "Se você deseja adicionar texto em destaque a uma página da web, você pode usar a tag <em>.",
+							"example": "```html\n<p>\n\tEste é um texto <em>em destaque</em>.\n</p>\n```",
+							"result": "<p>Este é um texto <em>em destaque</em>.</p>",
+							"note": "O elemento <i><strong>em</strong></i> é usado para adicionar texto em destaque a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>em</strong></i> para adicionar texto em destaque.",
+							"slug": "em"
+						},
+						{
+							"title": "Embed - <embed>",
+							"description": "Se você deseja incorporar conteúdo multimídia a uma página da web, você pode usar a tag <embed>.",
+							"example": "```html\n<embed\n\tsrc='video.mp4'\n\ttype='video/mp4'\n\twidth='320'\n\theight='240'\n>\n```",
+							"note": "O elemento <i><strong>embed</strong></i> é usado para incorporar conteúdo multimídia a uma página da web.<br/><br/> O atributo <i><strong>src</strong></i> especifica o URL do arquivo a ser incorporado. O atributo <i><strong>type</strong></i> especifica o tipo de arquivo a ser incorporado. O atributo <i><strong>width</strong></i> especifica a largura do conteúdo. O atributo <i><strong>height</strong></i> especifica a altura do conteúdo.",
+							"slug": "embed"
+						},
+						{
+							"title": "Campo de Formulário - <fieldset>",
+							"description": "Se você deseja agrupar elementos de formulário em uma página da web, você pode usar a tag <fieldset>.",
+							"example": "```html\n<form>\n\t<fieldset>\n\t\t<legend>Informações Pessoais</legend>\n\t\t<label for='name'>Nome:</label>\n\t\t<input type='text' id='name' name='name'>\n\t\t<label for='email'>E-mail:</label>\n\t\t<input type='email' id='email' name='email'>\n\t</fieldset>\n</form>\n```",
+							"result": "<form><fieldset><legend>Informações Pessoais</legend><label for='name'>Nome:</label><input type='text' id='name' name='name'><label for='email'>E-mail:</label><input type='email' id='email' name='email'></fieldset></form>",
+							"note": "O elemento <i><strong>fieldset</strong></i> é usado para agrupar elementos de formulário em uma página da web.<br/><br/> O elemento <i><strong>legend</strong></i> é usado para adicionar um título ao grupo de elementos de formulário.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>form</strong></i> para criar um formulário, <i><strong>fieldset</strong></i> para agrupar elementos de formulário, <i><strong>legend</strong></i> para adicionar um título ao grupo de elementos de formulário, <i><strong>label</strong></i> para adicionar rótulos aos campos de entrada e <i><strong>input</strong></i> para adicionar campos de entrada ao formulário.",
+							"slug": "fieldset"
+						},
+						{
+							"title": "Legenda de Figura - <figcaption>",
+							"description": "Se você deseja adicionar uma legenda a uma figura, você pode usar a tag <figcaption>.",
+							"example": "```html\n<figure>\n\t<img src='https://github.com/div-group-official.png' alt='Div Group'>\n\t<figcaption>Div Group</figcaption>\n</figure>\n```",
+							"result": "<figure><img src='https://github.com/div-group-official.png' alt='Div Group'><figcaption>Div Group</figcaption></figure>",
+							"note": "O elemento <i><strong>figcaption</strong></i> é usado para adicionar uma legenda a uma figura.<br/><br/> O elemento <i><strong>figure</strong></i> é usado para adicionar uma figura a uma página da web. O elemento <i><strong>img</strong></i> é usado para adicionar uma imagem à figura.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>figure</strong></i> para adicionar uma figura à página, <i><strong>img</strong></i> para adicionar uma imagem à figura e <i><strong>figcaption</strong></i> para adicionar uma legenda à figura.",
+							"slug": "figcaption"
+						},
+						{
+							"title": "Figura - <figure>",
+							"description": "Se você deseja adicionar uma figura a uma página da web, você pode usar a tag <figure>.",
+							"example": "```html\n<figure>\n\t<img src='https://github.com/div-group-official.png' alt='Div Group'>\n\t<figcaption>Div Group</figcaption>\n</figure>\n```",
+							"result": "<figure><img src='https://github.com/div-group-official.png' alt='Div Group'><figcaption>Div Group</figcaption></figure>",
+							"note": "O elemento <i><strong>figure</strong></i> é usado para adicionar uma figura a uma página da web.<br/><br/> O elemento <i><strong>figcaption</strong></i> é usado para adicionar uma legenda à figura. O elemento <i><strong>img</strong></i> é usado para adicionar uma imagem à figura.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>figure</strong></i> para adicionar uma figura à página, <i><strong>img</strong></i> para adicionar uma imagem à figura e <i><strong>figcaption</strong></i> para adicionar uma legenda à figura.",
+							"slug": "figure"
+						},
+						{
+							"title": "Roda-pé - <footer>",
+							"description": "Se você deseja adicionar um rodapé a uma página da web, você pode usar a tag <footer>.",
+							"example": "```html\n<footer>\n\t<p>&copy; 2022 Div Group. Todos os direitos reservados.</p>\n</footer>\n```",
+							"result": "<footer><p>&copy; 2022 Div Group. Todos os direitos reservados.</p></footer>",
+							"note": "O elemento <i><strong>footer</strong></i> é usado para adicionar um rodapé a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>footer</strong></i> para adicionar um rodapé à página e o elemento <i><strong>p</strong></i> para adicionar um parágrafo ao rodapé.",
+							"slug": "footer"
+						},
+						{
+							"title": "Formulário - <form>",
+							"description": "Se você deseja adicionar um formulário a uma página da web, você pode usar a tag <form>.",
+							"example": "```html\n<form>\n\t<label for='name'>Nome:</label>\n\t<input type='text' id='name' name='name'>\n\t<label for='email'>E-mail:</label>\n\t<input type='email' id='email' name='email'>\n</form>\n```",
+							"result": "<form><label for='name'>Nome:</label><input type='text' id='name' name='name'><label for='email'>E-mail:</label><input type='email' id='email' name='email'></form>",
+							"note": "O elemento <i><strong>form</strong></i> é usado para adicionar um formulário a uma página da web.<br/><br/> O elemento <i><strong>label</strong></i> é usado para adicionar rótulos aos campos de entrada. O elemento <i><strong>input</strong></i> é usado para adicionar campos de entrada ao formulário.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>form</strong></i> para criar um formulário, <i><strong>label</strong></i> para adicionar rótulos aos campos de entrada e <i><strong>input</strong></i> para adicionar campos de entrada ao formulário.",
+							"slug": "form"
 						}
 					]
 				}

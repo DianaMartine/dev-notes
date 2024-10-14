@@ -1,5 +1,6 @@
 "use client";
 import { IonBreadcrumb } from "@/app/shared/components/ion-breadcrumb/ion-breadcrumb";
+import { IonCombobox } from "@/app/shared/components/ion-combobox/ion-combobox";
 import { IonDialog } from "@/app/shared/components/ion-dialog/ion-dialog";
 import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
 import { IonPageInfo } from "@/app/shared/components/ion-page-info/ion-page-info";
@@ -148,25 +149,60 @@ gap-2
                 gap-2
                 "
                 >
-                   {
+                  {
+                    item.result.includes("<IonAlertDialog/>") && (
+                      <>
+                        <IonParagraph size="small">Clique no texto abaixo para ver o resultado:</IonParagraph>
+                        <IonDialog
+                          triggerLabel="Clique aqui para ver o resultado"
+                          title="Resultado"
+                          description={item.resultDescription as string}
+                        />
+                      </>
+                    )
+                  }
+                  {
                     item.result.includes("<IonDialog/>") && (
                       <>
-                      <IonParagraph size="small">Clique no texto abaixo para ver o resultado:</IonParagraph>
-                      <IonDialog
-                        triggerLabel="Clique aqui para ver o resultado"
-                        title="Resultado"
-                        description={item.example.split("<p>")[1].split("</p>")[0]} />
+                        <IonParagraph size="small">Clique no texto abaixo para ver o resultado:</IonParagraph>
+                        <IonDialog
+                          triggerLabel="Clique aqui para ver o resultado"
+                          title="Resultado"
+                          description={item.resultDescription as string} />
+                      </>
+                    )
+                  }
+                  {
+                    item.result.includes("<IonCombobox/>") && (
+                      <>
+                        <IonParagraph size="small">Resultado:</IonParagraph>
+                        <IonCombobox
+                          label={item.resultLabel as string}
+                          options={
+                            item.resultOptions?.map((option: { label: string; value: string }) => {
+                              return { value: option.value, label: option.label };
+                            }) as { value: string; label: string }[]
+                          }
+                          value={""}
+                          onChange={(currentValue: string) => {
+                            console.log(currentValue);
+                          }}
+                        />
                       </>
                     )
                   }
 
-              {
-                    !item.result.includes("<IonDialog/>") && (
+                  {
+                    (
+                      !item.result.includes("<IonAlertDialog/>") &&
+                      !item.result.includes("<IonDialog/>") &&
+                      !item.result.includes("<IonCombobox/>")
+                    ) && (
                       <>
-                      <IonParagraph size="small">Resultado:</IonParagraph>
-                      <div
-                        dangerouslySetInnerHTML={{ __html: item.result }}
-                        className={`
+                        <IonParagraph size="small">Resultado:</IonParagraph>
+                        <div
+                          dangerouslySetInnerHTML={{ __html: item.result }}
+                          className={`
                           bg-[#202020]
                           p-4
                           rounded-md
@@ -175,7 +211,7 @@ gap-2
                             hover:text-[#922AC7]
                             `}
                           `}
-                      />
+                        />
                       </>
                     )
                   }

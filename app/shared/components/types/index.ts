@@ -72,3 +72,13 @@ export type DialogProps = GlobalProps & {
   onConfirm?: () => void;
   onCancel?: () => void;
 };
+
+export type ComboboxProps = GlobalProps & {
+  label: string;
+  options: {
+    label: string;
+    value: string
+  }[];
+  value: string;
+  onChange: (value: string) => void;
+};

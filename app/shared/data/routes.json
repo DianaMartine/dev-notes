@@ -5,10 +5,10 @@
     },
     "about": {
         "title": "Sobre",
-        "url": "/sobre"
+        "url": "/about"
     },
     "contact": {
         "title": "Contato",
-        "url": "/contato"
+        "url": "/contact"
     }
 }

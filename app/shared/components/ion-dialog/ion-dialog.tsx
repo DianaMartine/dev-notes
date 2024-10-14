@@ -18,20 +18,26 @@ export const IonDialog = forwardRef<HTMLDivElement, DialogProps>(
     ) => {
         return (
             <Dialog>
-                <DialogTrigger asChild>
+                <DialogTrigger asChild className="
+                bg-transparent
+                ">
                     <Button variant="outline">
                         {triggerLabel}
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="
                 sm:max-w-[425px]
+                bg-[#1D0259]
+                text-white
                 "
                 >
                     <DialogHeader>
                         <DialogTitle>
                             {title}
                         </DialogTitle>
-                        <DialogDescription>
+                        <DialogDescription className="
+                        text-[#D3D3D3]
+                        ">
                             {description}
                         </DialogDescription>
                     </DialogHeader>
