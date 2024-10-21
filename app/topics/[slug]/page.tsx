@@ -15,10 +15,10 @@ export default function Topics() {
   );
 
   const [currentTopic] = useState<TopicProps>({
-    title: slugData?.title || "",
-    subtitle: slugData?.subtitle || "",
-    description: slugData?.description || "",
-    icon: slugData?.icon || "",
+    title: slugData?.title ?? "",
+    subtitle: slugData?.subtitle ?? "",
+    description: slugData?.description ?? "",
+    icon: slugData?.icon ?? "",
   });
 
   return (
@@ -64,9 +64,9 @@ export default function Topics() {
               sm:grid-cols-2
               "
             >
-              {slugData?.content.map((topic, index) => (
+              {slugData?.content.map((topic) => (
                 <IonTopic
-                  key={index}
+                  key={topic.slug}
                   title={topic.title}
                   description={topic.description}
                   slug={`${slug}/${topic.slug}`}

@@ -26,8 +26,6 @@ export const IonHeading = forwardRef<HTMLHeadingElement, HeadingProps>(
       </TagHeading>
     );
   },
-) as React.ForwardRefExoticComponent<
-  HeadingProps & React.RefAttributes<HTMLHeadingElement>
->;
+);
 
 IonHeading.displayName = "IonHeading";

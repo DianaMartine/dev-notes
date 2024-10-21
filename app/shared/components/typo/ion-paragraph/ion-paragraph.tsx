@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import type { ParagraphProps } from "@/app/shared/components/types";
 import clsx from "clsx";
 
-const IonParagraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
+export const IonParagraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
   ({ children, bgColor, textColor, size }, ref) => {
     return (
       <p
@@ -22,10 +22,6 @@ const IonParagraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
       </p>
     );
   },
-) as React.ForwardRefExoticComponent<
-  ParagraphProps & React.RefAttributes<HTMLParagraphElement>
->;
+);
 
 IonParagraph.displayName = "IonParagraph";
-
-export { IonParagraph };

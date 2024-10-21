@@ -106,7 +106,7 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
                 >
                   {socialLinks?.map((link) => (
                     <li key={link.title}>
-                      <Link href={link.href}>
+                      <Link href={link.href} target="_blank">
                         <Button className="
                         bg-[#FF66C4] 
                         hover:bg-[#BB3186] 
@@ -139,8 +139,6 @@ export const IonHeader = forwardRef<HTMLDivElement, HeaderProps>(
       </header>
     );
   },
-) as React.ForwardRefExoticComponent<
-  HeaderProps & React.RefAttributes<HTMLDivElement>
->;
+);
 
 IonHeader.displayName = "IonHeader";

@@ -30,8 +30,6 @@ export const IonPageInfo = forwardRef<HTMLDivElement, PageInfoProps>(
       </div>
     );
   },
-) as React.ForwardRefExoticComponent<
-  PageInfoProps & React.RefAttributes<HTMLDivElement>
->;
+);
 
 IonPageInfo.displayName = "IonPageInfo";

@@ -15,9 +15,9 @@ export default function Home() {
         gap-4
         "
       >
-        {data.topics.map((topic, index) => (
+        {data.topics.map((topic) => (
           <IonTopic
-            key={index}
+            key={topic.slug}
             icon={topic.icon}
             title={topic.title}
             description={topic.description}

@@ -82,3 +82,34 @@ export type ComboboxProps = GlobalProps & {
   value: string;
   onChange: (value: string) => void;
 };
+
+export type SummaryProps = GlobalProps & {
+  title: string;
+  items: {
+    title: string;
+    description: string;
+    slug?: string;
+  }[];
+};
+
+export type ContentProps = GlobalProps & {
+  title: string;
+  description: string;
+  content?: {
+    example?: string;
+    result?: string;
+    resultDescription?: string;
+    resultLabel?: string;
+    resultOptions?: {
+      label: string;
+      value: string;
+    }[];
+    note?: string;
+    slug?: string;
+  }[];
+};
+
+export type InputProps = GlobalProps & {
+  label: string;
+  type: string;
+};

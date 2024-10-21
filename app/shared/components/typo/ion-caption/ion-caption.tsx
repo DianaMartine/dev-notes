@@ -22,8 +22,6 @@ ${size === "large" && "text-lg"}
       </label>
     );
   },
-) as React.ForwardRefExoticComponent<
-  CaptionProps & React.RefAttributes<HTMLLabelElement>
->;
+);
 
 IonCaption.displayName = "IonCaption";

@@ -16,24 +16,27 @@ export const IonTopic = forwardRef<HTMLDivElement, TopicProps>(
       <Card
         ref={ref}
         className="
-w-full
-hover:shadow-lg
-hover:scale-105
-hover:bg-[#0D0126]
-hover:text-white
-transition-all
-"
+        hover:shadow-lg
+        hover:scale-105
+        hover:bg-[#0D0126]
+        hover:text-white
+        transition-all
+        w-full
+        flex
+        flex-col
+        justify-between
+        "
       >
         <CardHeader>
           {icon && (
             <Image
               className="
-relative
-top-[-1rem]
-right-[1.2rem]
-"
+              top-[-1rem]
+              right-[1.2rem]
+              relative
+              "
               src={icon}
-              alt={subtitle || title}
+              alt={subtitle ?? title}
               width={48}
               height={32}
               style={{
@@ -49,20 +52,13 @@ right-[1.2rem]
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardFooter>
-          <Link
-            href={`/topics/${slug}`}
-            className="
-hover:text-[#FF66C4]
-"
-          >
+          <Link href={`/topics/${slug}`}>
             Ver conteúdo
           </Link>
         </CardFooter>
       </Card>
     );
   },
-) as React.ForwardRefExoticComponent<
-  TopicProps & React.RefAttributes<HTMLDivElement>
->;
+);
 
 IonTopic.displayName = "IonTopic";

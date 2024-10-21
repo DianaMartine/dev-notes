@@ -22,8 +22,8 @@ export const IonBreadcrumb = forwardRef<HTMLDivElement, BreadcrumbProps>(
       <Breadcrumb
         ref={ref}
         className="
-py-4
-"
+        py-4
+        "
         style={{
           backgroundColor: bgColor,
           color: textColor,
@@ -32,45 +32,39 @@ py-4
         {navLinks.map((link) => (
           <BreadcrumbList key={link.title}>
             <BreadcrumbItem>
-              <BreadcrumbLink
-                href={link.href}
-                className="
-text-[#FAEBD7]
-hover:text-[#FF66C4]
-"
-              >
+              <BreadcrumbLink href={link.href}>
                 {link.title}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator
               className="
-text-[#bb3186]
-"
+              text-[#bb3186]
+              "
             />
             {link.nested && (
               <div
                 key={link.title}
                 className="
-flex
-gap-1
-items-center
-"
+                flex
+                gap-1
+                items-center
+                "
               >
                 {link.nested.map((nestedLink) => (
                   <div
                     key={nestedLink.title}
                     className="
-flex
-gap-1
-items-center
-"
+                    flex
+                    gap-1
+                    items-center
+                    "
                   >
                     {!nestedLink.nested && (
                       <BreadcrumbItem
                         key={nestedLink.title}
                         className="
-text-[#FF66C4]
-"
+                        text-[#FF66C4]
+                        "
                       >
                         <IonCaption size="small">{nestedLink.title}</IonCaption>
                       </BreadcrumbItem>
@@ -79,37 +73,33 @@ text-[#FF66C4]
                       <div
                         key={nestedLink.title}
                         className="
-flex
-gap-1
-items-center
-"
+                        gap-1
+                        items-center
+                        flex
+                        "
                       >
                         <BreadcrumbItem>
                           <BreadcrumbLink
                             href={nestedLink.href}
-                            className="
-text-[#FAEBD7]
-hover:text-[#FF66C4]
-"
                           >
                             {nestedLink.title}
                           </BreadcrumbLink>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator
                           className="
-text-[#bb3186]
-"
+                          text-[#bb3186]
+                          "
                         />
                         {nestedLink.nested.length > 1 ? (
                           <BreadcrumbItem>
                             <DropdownMenu>
                               <DropdownMenuTrigger
                                 className="
-flex 
-items-center 
-gap-1
-text-[#FF66C4]
-"
+                                flex 
+                                items-center 
+                                gap-1
+                                text-[#FF66C4]
+                                "
                               >
                                 ... {nestedLink.nested[0].title}
                                 <span className="sr-only">Toggle menu</span>
@@ -117,25 +107,19 @@ text-[#FF66C4]
                               <DropdownMenuContent
                                 align="start"
                                 className="
-bg-[#1D0259]
-p-4
-rounded-md
-shadow-lg
-gap-1
-text-[#FAEBD7]
-"
+                                p-4
+                                rounded-md
+                                shadow-lg
+                                gap-1
+                                text-[#FAEBD7]
+                                bg-[#1D0259]
+                                "
                               >
                                 {nestedLink.nested.map((item) => (
                                   <div key={item.title}>
                                     {item.href ? (
                                       <DropdownMenuItem key={item.title}>
-                                        <Link
-                                          href={item.href}
-                                          className="
-hover:text-[#FF66C4]
-font-bold
-"
-                                        >
+                                        <Link href={item.href}>
                                           {item.title}
                                         </Link>
                                       </DropdownMenuItem>
@@ -154,8 +138,8 @@ font-bold
                             <BreadcrumbLink
                               href={nestedLink.nested[0].href}
                               className="
-text-[#FAEBD7]
-"
+                              text-[#FAEBD7]
+                              "
                             >
                               {nestedLink.nested[0].title}
                             </BreadcrumbLink>
@@ -172,8 +156,6 @@ text-[#FAEBD7]
       </Breadcrumb>
     );
   },
-) as React.ForwardRefExoticComponent<
-  BreadcrumbProps & React.RefAttributes<HTMLDivElement>
->;
+);
 
 IonBreadcrumb.displayName = "IonBreadcrumb";

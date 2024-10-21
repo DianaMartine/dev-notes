@@ -4,5 +4,14 @@
     "companyName": "Div Group",
     "allRightsReserved": "Todos os direitos reservados",
     "developedBy": "Desenvolvido por",
-    "noResults": "Nenhum resultado encontrado"
+    "noResults": "Nenhum resultado encontrado",
+    "example": "Exemplo:",
+    "result": "Resultado:",
+    "clickMeToSeeResult": "Clique em mim para ver o resultado",
+    "selectOption": "Selecione uma opção",
+    "note": "Nota:",
+    "emailInput": "E-mail",
+    "passwordInput": "Senha",
+    "actionInput": "Enviar",
+    "filedsetLabel": "Informações"
 }

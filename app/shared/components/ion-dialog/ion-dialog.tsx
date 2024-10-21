@@ -64,6 +64,6 @@ export const IonDialog = forwardRef<HTMLDivElement, DialogProps>(
             </Dialog>
         )
     },
-) as React.ForwardRefExoticComponent<DialogProps & React.RefAttributes<HTMLDivElement>>;
+);
 
 IonDialog.displayName = "IonDialog"

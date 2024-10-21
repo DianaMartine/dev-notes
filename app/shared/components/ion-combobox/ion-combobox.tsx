@@ -83,6 +83,6 @@ export const IonCombobox = forwardRef<HTMLDivElement, ComboboxProps>(
             </Popover>
         );
     },
-) as React.ForwardRefExoticComponent<ComboboxProps & React.RefAttributes<HTMLDivElement>>;
+);
 
 IonCombobox.displayName = "IonCombobox";

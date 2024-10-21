@@ -30,7 +30,8 @@
 						{
 							"title": "Exemplo",
 							"description": "A estrutura básica de um documento HTML5 é composta por elementos HTML (tags).",
-							"example": "```html\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Page Title</title>\n\t</head>\n\t<body>\n\t\t<h1>This is a Heading</h1>\n\t\t<p>This is a paragraph.</p>\n\t</body>\n</html>\n\n Explicando o exemplo:\n\n- <!DOCTYPE html> define o tipo de documento HTML5.\n- <html> é o elemento raiz de um documento HTML5.\n- <head> contém metadados para o documento HTML5.\n- <title> define o título do documento HTML5.\n- <body> contém o conteúdo do documento HTML5.\n- <h1> define um cabeçalho de nível 1.\n- <p> define um parágrafo.\n\nVeja nossa seção de tags para mais informações.\n```",
+							"example": "```html\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Page Title</title>\n\t</head>\n\t<body>\n\t\t<h1>This is a Heading</h1>\n\t\t<p>This is a paragraph.</p>\n\t</body>\n</html>\n```",
+							"note": "No exemplo acima, foi usado o elemento <i><strong>!DOCTYPE html</strong></i> para definir o tipo de documento para HTML5, <i><strong>html</strong></i> para definir o elemento raiz do documento, <i><strong>head</strong></i> para definir informações sobre o documento, <i><strong>title</strong></i> para definir o título do documento, <i><strong>body</strong></i> para definir o conteúdo do documento, <i><strong>h1</strong></i> para definir um cabeçalho de nível 1 e <i><strong>p</strong></i> para definir um parágrafo. Para mais informações sobre tags HTML5, acesse a seção <a href='/topics/html5/tags'>Tags</a>.",
 							"slug": "exemplo"
 						}
 					]
@@ -155,7 +156,7 @@
 							"description": "Se você deseja adicionar um botão a uma página da web, você pode usar a tag <button>.",
 							"example": "```html\n<button onclick='alert(\"Tudo certo!\")'>Clique em mim</button>\n```",
 							"result": "<IonAlertDialog/>",
-							"resultDescription": "Clique em mim",
+							"resultDescription": "Tudo certo!",
 							"note": "No exemplo acima, foi usado o elemento <i><strong>button</strong></i> para adicionar um botão, o atributo <i><strong>onclick</strong></i> para executar um script quando o botão é clicado e a função <i><strong>alert()</strong></i> para exibir uma caixa de diálogo com uma mensagem.",
 							"slug": "button"
 						},
@@ -282,7 +283,7 @@
 							"title": "Diálogo - <dialog>",
 							"description": "Se você deseja adicionar um diálogo a uma página da web, você pode usar a tag <dialog>.",
 							"example": "```html\n<dialog open>\n\t<p>Este é um diálogo.</p>\n</dialog>\n```",
-							"result": " <IonDialog/>",
+							"result": "<IonDialog/>",
 							"resultDescription": "Este é um diálogo.",
 							"note": "O elemento <i><strong>dialog</strong></i> é usado para adicionar um diálogo a uma página da web.<br/><br/> O atributo <i><strong>open</strong></i> exibe o diálogo aberto.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>dialog</strong></i> para adicionar um diálogo à página, <i><strong>p</strong></i> para adicionar conteúdo ao diálogo.",
 							"slug": "dialog"
@@ -329,8 +330,8 @@
 						{
 							"title": "Campo de Formulário - <fieldset>",
 							"description": "Se você deseja agrupar elementos de formulário em uma página da web, você pode usar a tag <fieldset>.",
-							"example": "```html\n<form>\n\t<fieldset>\n\t\t<legend>Informações Pessoais</legend>\n\t\t<label for='name'>Nome:</label>\n\t\t<input type='text' id='name' name='name'>\n\t\t<label for='email'>E-mail:</label>\n\t\t<input type='email' id='email' name='email'>\n\t</fieldset>\n</form>\n```",
-							"result": "<form><fieldset><legend>Informações Pessoais</legend><label for='name'>Nome:</label><input type='text' id='name' name='name'><label for='email'>E-mail:</label><input type='email' id='email' name='email'></fieldset></form>",
+							"example": "```html\n<form>\n\t<fieldset>\n\t\t<legend>Informações</legend>\n\t\t<label for='email'>E-mail:</label>\n\t\t<input type='email' id='email' name='email'>\n\t</fieldset>\n</form>\n```",
+							"result": "<IonFieldset/>",
 							"note": "O elemento <i><strong>fieldset</strong></i> é usado para agrupar elementos de formulário em uma página da web.<br/><br/> O elemento <i><strong>legend</strong></i> é usado para adicionar um título ao grupo de elementos de formulário.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>form</strong></i> para criar um formulário, <i><strong>fieldset</strong></i> para agrupar elementos de formulário, <i><strong>legend</strong></i> para adicionar um título ao grupo de elementos de formulário, <i><strong>label</strong></i> para adicionar rótulos aos campos de entrada e <i><strong>input</strong></i> para adicionar campos de entrada ao formulário.",
 							"slug": "fieldset"
 						},
@@ -361,9 +362,9 @@
 						{
 							"title": "Formulário - <form>",
 							"description": "Se você deseja adicionar um formulário a uma página da web, você pode usar a tag <form>.",
-							"example": "```html\n<form>\n\t<label for='name'>Nome:</label>\n\t<input type='text' id='name' name='name'>\n\t<label for='email'>E-mail:</label>\n\t<input type='email' id='email' name='email'>\n</form>\n```",
-							"result": "<form><label for='name'>Nome:</label><input type='text' id='name' name='name'><label for='email'>E-mail:</label><input type='email' id='email' name='email'></form>",
-							"note": "O elemento <i><strong>form</strong></i> é usado para adicionar um formulário a uma página da web.<br/><br/> O elemento <i><strong>label</strong></i> é usado para adicionar rótulos aos campos de entrada. O elemento <i><strong>input</strong></i> é usado para adicionar campos de entrada ao formulário.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>form</strong></i> para criar um formulário, <i><strong>label</strong></i> para adicionar rótulos aos campos de entrada e <i><strong>input</strong></i> para adicionar campos de entrada ao formulário.",
+							"example": "```html\n<form>\n\t<label for='email'>E-mail:</label>\n\t<input type='email' id='email' name='email'>\n\t<label for='password'>Senha:</label>\n\t<input type='password' id='password' name='password'>\n\t<input type='submit' value='Enviar'>\n</form>\n```",
+							"result": "<IonForm/>",
+							"note": "O elemento <i><strong>form</strong></i> é usado para adicionar um formulário a uma página da web.<br/><br/> O atributo <i><strong>for</strong></i> especifica o ID do elemento ao qual o rótulo está vinculado. O atributo <i><strong>id</strong></i> especifica um ID para o elemento. O atributo <i><strong>name</strong></i> especifica o nome do elemento. O atributo <i><strong>type</strong></i> especifica o tipo de entrada. O atributo <i><strong>value</strong></i> especifica o valor do elemento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>form</strong></i> para criar um formulário, <i><strong>label</strong></i> para adicionar rótulos aos campos de entrada, <i><strong>input</strong></i> para adicionar campos de entrada ao formulário e <i><strong>submit</strong></i> para adicionar um botão de envio ao formulário.",
 							"slug": "form"
 						}
 					]
