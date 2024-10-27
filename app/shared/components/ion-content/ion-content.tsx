@@ -10,6 +10,7 @@ import { IonParagraph } from "../typo/ion-paragraph/ion-paragraph";
 import { IonCombobox } from "../ion-combobox/ion-combobox";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 import { IonInput } from "../ion-input/ion-input";
+import { IonHeader } from "../ion-header/ion-header";
 
 const ItemResult: React.FC<{
     result: string,
@@ -76,6 +77,7 @@ const ItemResult: React.FC<{
                             <IonInput
                                 label={common.actionInput}
                                 type="submit"
+                                value={common.actionedInput}
                             />
                         </form>
                     </>
@@ -99,7 +101,32 @@ const ItemResult: React.FC<{
                         </fieldset>
                     </>
                 );
-                default:
+            case "<IonHeading/>":
+                return (
+                    <>
+                        <IonParagraph size="small">{common.result}</IonParagraph>
+                        {Array.from({ length: 6 }, (_, i) => (
+                            <IonHeading key={i} level={i + 1 as 1 | 2 | 3 | 4 | 5 | 6}>
+                                Heading {i + 1}
+                            </IonHeading>
+
+                        ))}
+                    </>
+                );
+            case "<IonHeadingGroup/>":
+                return (
+                    <>
+                        <IonParagraph size="small">{common.result}</IonParagraph>
+                        <hgroup>
+                            {Array.from({ length: 2 }, (_, i) => (
+                                <IonHeading key={i} level={i + 1 as 1 | 2 | 3 | 4 | 5 | 6}>
+                                    Heading {i + 1}
+                                </IonHeading>
+                            ))}
+                        </hgroup>
+                    </>
+                );
+            default:
                 return <>
                     <IonParagraph size="small">{common.result}</IonParagraph>
                     <div

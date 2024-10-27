@@ -112,4 +112,5 @@ export type ContentProps = GlobalProps & {
 export type InputProps = GlobalProps & {
   label: string;
   type: string;
+  value?: string;
 };

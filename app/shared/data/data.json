@@ -366,6 +366,53 @@
 							"result": "<IonForm/>",
 							"note": "O elemento <i><strong>form</strong></i> é usado para adicionar um formulário a uma página da web.<br/><br/> O atributo <i><strong>for</strong></i> especifica o ID do elemento ao qual o rótulo está vinculado. O atributo <i><strong>id</strong></i> especifica um ID para o elemento. O atributo <i><strong>name</strong></i> especifica o nome do elemento. O atributo <i><strong>type</strong></i> especifica o tipo de entrada. O atributo <i><strong>value</strong></i> especifica o valor do elemento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>form</strong></i> para criar um formulário, <i><strong>label</strong></i> para adicionar rótulos aos campos de entrada, <i><strong>input</strong></i> para adicionar campos de entrada ao formulário e <i><strong>submit</strong></i> para adicionar um botão de envio ao formulário.",
 							"slug": "form"
+						},
+						{
+							"title": "Cabeçalho - <h1> a <h6>",
+							"description": "Se você deseja adicionar um cabeçalho a uma página da web, você pode usar as tags <h1> a <h6>.",
+							"example": "```html\n<h1>Cabeçalho 1</h1>\n<h2>Cabeçalho 2</h2>\n<h3>Cabeçalho 3</h3>\n<h4>Cabeçalho 4</h4>\n<h5>Cabeçalho 5</h5>\n<h6>Cabeçalho 6</h6>\n```",
+							"result": "<IonHeading/>",
+							"note": "As tags <i><strong>h1</strong></i> a <i><strong>h6</strong></i> são usadas para adicionar cabeçalhos a uma página da web.<br/><br/> No exemplo acima, foram usadas as tags <i><strong>h1</strong></i> a <i><strong>h6</strong></i> para adicionar cabeçalhos à página.",
+							"slug": "h1-a-h6"
+						},
+						{
+							"title": "Container de meta-informação - <head>",
+							"description": "Se você deseja adicionar meta-informações a uma página da web, você pode usar a tag <head>.",
+							"example": "```html\n<head>\n\t<title>Minha Página</title>\n\t<meta charset='UTF-8'>\n</head>\n```",
+							"note": "O elemento <i><strong>head</strong></i> é usado para adicionar meta-informações a uma página da web.<br/><br/> O elemento <i><strong>title</strong></i> é usado para adicionar um título à página. O elemento <i><strong>meta</strong></i> é usado para adicionar metadados à página.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>head</strong></i> para adicionar meta-informações à página, <i><strong>title</strong></i> para adicionar um título à página e <i><strong>meta</strong></i> para adicionar metadados à página.",
+							"slug": "head"
+						},
+						{
+							"title": "Cabeçalho de Grupo - <header>",
+							"description": "Se você deseja adicionar um cabeçalho de grupo a uma página da web, você pode usar a tag <header>.",
+							"example": "```html\n<header>\n\t<h1>Cabeçalho 1</h1>\n\t<p>Cabeçalho de Grupo</p>\n\t<nav style='display: flex; flex-direction: column;'>\n\t\t<a href='#'>Link 1</a>\n\t\t<a href='#'>Link 2</a>\n\t</nav>\n</header>\n```",
+							"result": "<header><h1>Cabeçalho 1</h1><p>Cabeçalho de Grupo</p><nav style='display: flex; flex-direction: column;'><a href='#'>Link 1</a><a href='#'>Link 2</a></nav></header>",
+							"note": "O elemento <i><strong>header</strong></i> é usado para adicionar um cabeçalho de grupo a uma página da web.<br/><br/> O atributo <i><strong>style</strong></i> especifica o estilo do cabeçalho de grupo.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>header</strong></i> para adicionar um cabeçalho de grupo à página, <i><strong>h1</strong></i> para adicionar um cabeçalho ao cabeçalho de grupo, <i><strong>p</strong></i> para adicionar um parágrafo ao cabeçalho de grupo e <i><strong>nav</strong></i> para adicionar uma navegação ao cabeçalho de grupo.",
+							"slug": "header"
+						},
+						{
+							"title": "Cabeçalho de Grupo - <hgroup>",
+							"description": "Se você deseja agrupar cabeçalhos em uma página da web, você pode usar a tag <hgroup>.",
+							"example": "```html\n<hgroup>\n\t<h1>Cabeçalho 1</h1>\n\t<h2>Cabeçalho 2</h2>\n</hgroup>\n```",
+							"result": "<IonHeadingGroup/>",
+							"note": "O elemento <i><strong>hgroup</strong></i> é usado para agrupar cabeçalhos em uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>hgroup</strong></i> para agrupar cabeçalhos.",
+							"slug": "hgroup"
+						},
+						{
+							"title": "Divisão Horizontal - <hr>",
+							"description": "Se você deseja adicionar uma divisão horizontal a uma página da web, você pode usar a tag <hr>.",
+							"example": "```html\n<p>Parágrafo 1</p>\n<hr>\n<p>Parágrafo 2</p>\n```",
+							"result": "<p>Parágrafo 1</p><hr><p>Parágrafo 2</p>",
+							"note": "O elemento <i><strong>hr</strong></i> é usado para adicionar uma divisão horizontal a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para adicionar parágrafos à página e o elemento <i><strong>hr</strong></i> para adicionar uma divisão horizontal.",
+							"slug": "hr"
+						},
+						{
+							"title": "Html - <html>",
+							"description": "Se você deseja adicionar um documento HTML a uma página da web, você pode usar a tag <html>.",
+							"example": "```html\n<!DOCTYPE html>\n<html lang='pt-BR'>\n\t<head>\n\t\t<meta charset='UTF-8'>\n\t\t<title>Minha Página</title>\n\t</head>\n\t<body>\n\t\t<h1>Olá, Mundo!</h1>\n\t</body>\n</html>\n```",
+							"result": "<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><title>Minha Página</title></head><body><h1>Olá, Mundo!</h1></body></html>",
+							"note": "O elemento <i><strong>html</strong></i> é usado para adicionar um documento HTML a uma página da web.<br/><br/> O atributo <i><strong>lang</strong></i> especifica o idioma do documento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>html</strong></i> para adicionar um documento HTML à página, <i><strong>head</strong></i> para adicionar meta-informações ao documento, <i><strong>body</strong></i> para adicionar conteúdo ao documento e <i><strong>h1</strong></i> para adicionar um cabeçalho ao documento.",
+							"slug": "html"
 						}
 					]
 				}
