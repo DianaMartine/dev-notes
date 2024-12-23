@@ -5,6 +5,8 @@ import IonLayout from "@/app/shared/components/ion-layout/ion-layout";
 import { IonPageInfo } from "@/app/shared/components/ion-page-info/ion-page-info";
 import { IonSummary } from "@/app/shared/components/ion-summary/ion-summary";
 import data from "@/app/shared/data/data.json";
+import { Button } from "@/components/ui/button";
+import { ArrowUpIcon } from "@radix-ui/react-icons";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
@@ -56,7 +58,7 @@ export default function Content() {
         description={currentContent.content.description}
       />
 
-      <div className="space-y-4">
+      <div className="space-y-4" id="top">
         <IonSummary
           title="Sumário:"
           items={(contentData?.content ?? []).map((item) => ({
@@ -80,13 +82,36 @@ export default function Content() {
                   slug: 'slug' in item ? (item.slug) : "",
                   resultLabel: 'resultLabel' in item ? (item.resultLabel as string) : "",
                   resultOptions: 'resultOptions' in item ? (item.resultOptions as { label: string; value: string; }[]) : [],
-                  note: 'note' in item ? (item.note as unknown as string) : "",
+                  note: 'note' in item ? (item.note as string) : "",
                 },
               ]}
             />
           ))
         }
       </div>
+
+      <Button
+        size="sm"
+        className="
+        rounded-full
+        bottom-16
+        right-4
+        sm:right-6
+        md:right-8
+        lg:right-12
+        bg-[#FF66C4] 
+        hover:bg-[#BB3186]
+        hover:outline 
+        hover:outline-[1px]
+        hover:outline-white
+        absolute 
+        "
+        onClick={() => {
+          document.getElementById("top")?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <ArrowUpIcon />
+      </Button>
     </IonLayout>
   );
 }
