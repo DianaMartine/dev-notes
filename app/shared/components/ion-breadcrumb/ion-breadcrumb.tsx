@@ -32,7 +32,12 @@ export const IonBreadcrumb = forwardRef<HTMLDivElement, BreadcrumbProps>(
         {navLinks.map((link) => (
           <BreadcrumbList key={link.title}>
             <BreadcrumbItem>
-              <BreadcrumbLink href={link.href}>
+              <BreadcrumbLink
+                className="
+                text-[#FaEBD7]
+                hover:text-[#Ff66C4]
+              "
+                href={link.href}>
                 {link.title}
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -80,6 +85,10 @@ export const IonBreadcrumb = forwardRef<HTMLDivElement, BreadcrumbProps>(
                       >
                         <BreadcrumbItem>
                           <BreadcrumbLink
+                            className="
+                            text-[#FAEBD7]
+                            hover:text-[#FF66C4]
+                          "
                             href={nestedLink.href}
                           >
                             {nestedLink.title}

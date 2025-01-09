@@ -413,6 +413,46 @@
 							"result": "<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><title>Minha Página</title></head><body><h1>Olá, Mundo!</h1></body></html>",
 							"note": "O elemento <i><strong>html</strong></i> é usado para adicionar um documento HTML a uma página da web.<br/><br/> O atributo <i><strong>lang</strong></i> especifica o idioma do documento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>html</strong></i> para adicionar um documento HTML à página, <i><strong>head</strong></i> para adicionar meta-informações ao documento, <i><strong>body</strong></i> para adicionar conteúdo ao documento e <i><strong>h1</strong></i> para adicionar um cabeçalho ao documento.",
 							"slug": "html"
+						},
+						{
+							"title": "Itálico - <i>",
+							"description": "Se você deseja adicionar texto em itálico a uma página da web, você pode usar a tag <i>.",
+							"example": "```html\n<p>\n\tEste é um texto <i>em itálico</i>.\n</p>\n```",
+							"result": "<p>Este é um texto <i>em itálico</i>.</p>",
+							"note": "O elemento <i><strong>i</strong></i> é usado para adicionar texto em itálico a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>i</strong></i> para adicionar texto em itálico.",
+							"slug": "i"
+						},
+						{
+							"title": "Iframe - <iframe>",
+							"description": "Se você deseja incorporar uma página da web a uma página da web, você pode usar a tag <iframe>.",
+							"example": "```html\n<iframe src='https://dev-notes-beta.vercel.app/easter-egg' width='100%' height='600'></iframe>\n```",
+							"result": "<iframe src='https://dev-notes-beta.vercel.app/easter-egg' width='100%' height='600'></iframe>",
+							"note": "O elemento <i><strong>iframe</strong></i> é usado para incorporar uma página da web a uma página da web.<br/><br/> O atributo <i><strong>src</strong></i> especifica o URL da página a ser incorporada. O atributo <i><strong>width</strong></i> especifica a largura do iframe. O atributo <i><strong>height</strong></i> especifica a altura do iframe.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>iframe</strong></i> para incorporar uma página da web à página.",
+							"slug": "iframe"
+						},
+						{
+							"title": "Imagem - <img>",
+							"description": "Se você deseja adicionar uma imagem a uma página da web, você pode usar a tag <img>.",
+							"example": "```html\n<img src='https://github.com/div-group-official.png' alt='Div Group'>\n```",
+							"result": "<img src='https://github.com/div-group-official.png' alt='Div Group'>",
+							"note": "O elemento <i><strong>img</strong></i> é usado para adicionar uma imagem a uma página da web.<br/><br/> O atributo <i><strong>src</strong></i> especifica o URL da imagem. O atributo <i><strong>alt</strong></i> especifica o texto alternativo da imagem.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>img</strong></i> para adicionar uma imagem à página.",
+							"slug": "img"
+						},
+						{
+							"title": "Entrada - <input>",
+							"description": "Se você deseja adicionar um campo de entrada a um formulário em uma página da web, você pode usar a tag <input>.",
+							"example": "```html\n<label for='email'>E-mail:</label>\n<input type='email' id='email' name='email'>\n```",
+							"result": "<IonInput/>",
+							"note": "O elemento <i><strong>input</strong></i> é usado para adicionar um campo de entrada a um formulário em uma página da web.<br/><br/> O atributo <i><strong>type</strong></i> especifica o tipo de entrada. O atributo <i><strong>id</strong></i> especifica um ID para o elemento. O atributo <i><strong>name</strong></i> especifica o nome do elemento.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>label</strong></i> para adicionar um rótulo ao campo de entrada e o elemento <i><strong>input</strong></i> para adicionar um campo de entrada ao formulário.",
+							"slug": "input"
+						},
+						{
+							"title": "Inserir - <ins>",
+							"description": "Se você deseja adicionar texto inserido a uma página da web, você pode usar a tag <ins>.",
+							"example": "```html\n<p>\n\tO texto <ins>inserido</ins> foi adicionado.\n</p>\n```",
+							"result": "<p>O texto <ins>inserido</ins> foi adicionado.</p>",
+							"note": "O elemento <i><strong>ins</strong></i> é usado para adicionar texto inserido a uma página da web.<br/><br/> No exemplo acima, foi usado o elemento <i><strong>p</strong></i> para criar um parágrafo e o elemento <i><strong>ins</strong></i> para adicionar texto inserido.",
+							"slug": "ins"
 						}
 					]
 				}

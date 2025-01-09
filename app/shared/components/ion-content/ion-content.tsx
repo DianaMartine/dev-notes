@@ -1,16 +1,15 @@
 import common from "@/app/shared/data/common.json";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 import { forwardRef } from "react";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { IonCombobox } from "../ion-combobox/ion-combobox";
 import { IonDialog } from "../ion-dialog/ion-dialog";
+import { IonInput } from "../ion-input/ion-input";
 import { ContentProps } from "../types";
 import { IonHeading } from "../typo/ion-heading/ion-heading";
 import { IonParagraph } from "../typo/ion-paragraph/ion-paragraph";
-import { IonCombobox } from "../ion-combobox/ion-combobox";
-import { InfoCircledIcon } from "@radix-ui/react-icons";
-import { IonInput } from "../ion-input/ion-input";
-import { IonHeader } from "../ion-header/ion-header";
 
 const ItemResult: React.FC<{
     result: string,
@@ -124,6 +123,13 @@ const ItemResult: React.FC<{
                                 </IonHeading>
                             ))}
                         </hgroup>
+                    </>
+                );
+            case "<IonInput/>":
+                return (
+                    <>
+                        <IonParagraph size="small">{common.result}</IonParagraph>
+                        <IonInput label={common.emailInput} type="email" />
                     </>
                 );
             default:
@@ -277,7 +283,5 @@ export const IonContent = forwardRef<HTMLDivElement, ContentProps>(
         );
     },
 );
-
-IonContent.displayName = "IonContent";
 
 IonContent.displayName = "IonContent";

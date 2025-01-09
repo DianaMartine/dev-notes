@@ -61,7 +61,7 @@ export default function Content() {
       <div className="space-y-4" id="top">
         <IonSummary
           title="Sumário:"
-          items={(contentData?.content ?? []).map((item) => ({
+          items={(contentData?.content as any ?? []).map((item: { title: any; description: any; slug: any; }) => ({
             title: item.title,
             description: item.description,
             slug: item.slug,
@@ -72,8 +72,8 @@ export default function Content() {
           contentData?.content?.map((item) => (
             <IonContent
               key={item.slug}
-              title={item.title}
-              description={item.description}
+              title={item.title as string}
+              description={item.description as string}
               content={[
                 {
                   example: 'example' in item ? (item.example as string) : "",

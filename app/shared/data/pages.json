@@ -6,5 +6,10 @@
     "contact": {
         "title": "Contato",
         "description": "Fique a vontade para entrar em contato comigo, seja para tirar dúvidas, sugerir melhorias ou até mesmo para bater um papo. Estou sempre disponível para ajudar e trocar conhecimento. Até mais!"
+    },
+    "easter-egg": {
+        "title": "Tudo Certo",
+        "description": "Parabéns Jovem, você encontrou o Easter Egg! Agora é só aproveitar o conteúdo e bons estudos!",
+        "notes": "Agradeço a todos que estão acompanhando o projeto e espero que estejam gostando. Se tiverem alguma sugestão ou crítica, fiquem a vontade para entrar em contato. Até mais! E lembre-se: Esse é um conteúdo secreto, então não conte para ninguém!"
     }
 }

@@ -18,14 +18,18 @@ export const IonDialog = forwardRef<HTMLDivElement, DialogProps>(
     ) => {
         return (
             <Dialog>
-                <DialogTrigger asChild className="
+                <DialogTrigger
+                    asChild
+                    className="
                 bg-transparent
-                ">
-                    <Button variant="outline">
+                " >
+                    <Button
+                        variant="outline">
                         {triggerLabel}
                     </Button>
                 </DialogTrigger>
-                <DialogContent className="
+                <DialogContent
+                    className="
                 sm:max-w-[425px]
                 bg-[#1D0259]
                 text-white
@@ -42,21 +46,29 @@ export const IonDialog = forwardRef<HTMLDivElement, DialogProps>(
                         </DialogDescription>
                     </DialogHeader>
                     {
-                        (confirmLabel ||
-                            cancelLabel ||
-                            onConfirm ||
-                            onCancel) && (
+                        
+                        confirmLabel && (
                             <DialogFooter>
                                 <Button
                                     onClick={onConfirm}
+                                    className="
+                                bg-[#FF66C4]
+                                text-white
+                                "
                                 >
                                     {confirmLabel}
                                 </Button>
-                                <Button
-                                    onClick={onCancel}
-                                >
-                                    {cancelLabel}
-                                </Button>
+                                {cancelLabel && (
+                                    <Button
+                                        onClick={onCancel}
+                                        className="
+                                    bg-[#FF66C4]
+                                    text-white
+                                    "
+                                    >
+                                        {cancelLabel}
+                                    </Button>
+                                )}
                             </DialogFooter>
                         )
                     }
