@@ -11,13 +11,10 @@ import { IonBreadcrumb } from "../shared/components/ion-breadcrumb/ion-breadcrum
 import { IonDialog } from "../shared/components/ion-dialog/ion-dialog";
 import IonLayout from "../shared/components/ion-layout/ion-layout";
 import { IonParagraph } from "../shared/components/typo/ion-paragraph/ion-paragraph";
-import { useWindowSize } from "react-use";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 export default function Easter() {
-    const {
-        width,
-        height,
-    } = useWindowSize();
+    const size = useWindowSize();
     const [recycle, setRecycle] = useState(true);
 
     useEffect(() => {
@@ -32,56 +29,58 @@ export default function Easter() {
         , []);
 
     return (
-        <IonLayout>
-            <IonBreadcrumb
-                navLinks={[
-                    {
-                        title: routes.home.title,
-                        href: routes.home.url,
-                        nested: [
-                            {
-                                title: routes.easteregg.title,
-                            },
-                        ],
-                    },
+        <>
+            <ReactConfetti
+                width={size.width ?? 0}
+                height={size.height ?? 0}
+                drawShape={(context) => {
+                    context.beginPath();
+                    context.moveTo(0, 0);
+                    context.lineTo(10, 10);
+                    context.lineTo(0, 10);
+                    context.fill();
+                }}
+                recycle={recycle}
+                colors={[
+                    "#FF66C4",
+                    "#FAEBD7",
+                    "#59D9D9",
                 ]}
             />
-            <div
-                className="flex flex-col items-center space-y-4 text-center"
-            >
-                <ReactConfetti
-                    width={width}
-                    height={height}
-                    drawShape={(context) => {
-                        context.beginPath();
-                        context.moveTo(0, 0);
-                        context.lineTo(10, 10);
-                        context.lineTo(0, 10);
-                        context.fill();
-                    }}
-                    recycle={recycle}
-                    colors={[
-                        "#FF66C4",
-                        "#FAEBD7",
-                        "#59D9D9",
+            <IonLayout>
+                <IonBreadcrumb
+                    navLinks={[
+                        {
+                            title: routes.home.title,
+                            href: routes.home.url,
+                            nested: [
+                                {
+                                    title: routes.easteregg.title,
+                                },
+                            ],
+                        },
                     ]}
                 />
-                <IonDialog
-                    triggerLabel={"Não clique aqui..."}
-                    title={pages.easteregg.title}
-                    description={pages.easteregg.description}
+                <div
+                    className="flex flex-col items-center space-y-4 text-center"
                 >
-                </IonDialog>
-                <Image
-                    src={`${socialLinks.github.url}.png`}
-                    alt="Easteregg"
-                    width={300}
-                    height={300}
-                />
-                <IonParagraph size={"medium"}>
-                    {pages.easteregg.notes}
-                </IonParagraph>
-            </div>
-        </IonLayout>
+                    <IonDialog
+                        triggerLabel={"Não clique aqui..."}
+                        title={pages.easteregg.title}
+                        description={pages.easteregg.description}
+                    >
+                    </IonDialog>
+                    <Image
+                        src={`${socialLinks.github.url}.png`}
+                        alt="Easteregg"
+                        width={300}
+                        height={300}
+                    />
+                    <IonParagraph size={"medium"}>
+                        {pages.easteregg.notes}
+                    </IonParagraph>
+                </div>
+            </IonLayout>
+        </>
     )
 }
