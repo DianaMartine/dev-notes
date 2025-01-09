@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useState } from "react";
 import ReactConfetti from "react-confetti";
 
@@ -12,8 +11,13 @@ import { IonBreadcrumb } from "../shared/components/ion-breadcrumb/ion-breadcrum
 import { IonDialog } from "../shared/components/ion-dialog/ion-dialog";
 import IonLayout from "../shared/components/ion-layout/ion-layout";
 import { IonParagraph } from "../shared/components/typo/ion-paragraph/ion-paragraph";
+import { useWindowSize } from "react-use";
 
 export default function Easter() {
+    const {
+        width,
+        height,
+    } = useWindowSize();
     const [recycle, setRecycle] = useState(true);
 
     useEffect(() => {
@@ -28,36 +32,38 @@ export default function Easter() {
         , []);
 
     return (
-        <>
-            <ReactConfetti
-                width={window.innerWidth}
-                height={window.innerHeight}
-                drawShape={(context) => {
-                    context.beginPath();
-                    context.moveTo(0, 0);
-                    context.lineTo(10, 10);
-                    context.lineTo(0, 10);
-                    context.fill();
-                }}
-                recycle={recycle}
-                colors={[
-                    "#FF66C4",
-                    "#FAEBD7",
-                    "#59D9D9",
+        <IonLayout>
+            <IonBreadcrumb
+                navLinks={[
+                    {
+                        title: routes.home.title,
+                        href: routes.home.url,
+                        nested: [
+                            {
+                                title: routes.easteregg.title,
+                            },
+                        ],
+                    },
                 ]}
             />
-            <IonLayout>
-                <IonBreadcrumb
-                    navLinks={[
-                        {
-                            title: routes.home.title,
-                            href: routes.home.url,
-                            nested: [
-                                {
-                                    title: routes.easteregg.title,
-                                },
-                            ],
-                        },
+            <div
+                className="flex flex-col items-center space-y-4 text-center"
+            >
+                <ReactConfetti
+                    width={width}
+                    height={height}
+                    drawShape={(context) => {
+                        context.beginPath();
+                        context.moveTo(0, 0);
+                        context.lineTo(10, 10);
+                        context.lineTo(0, 10);
+                        context.fill();
+                    }}
+                    recycle={recycle}
+                    colors={[
+                        "#FF66C4",
+                        "#FAEBD7",
+                        "#59D9D9",
                     ]}
                 />
                 <IonDialog
@@ -66,20 +72,16 @@ export default function Easter() {
                     description={pages.easteregg.description}
                 >
                 </IonDialog>
-                <div
-                    className="flex flex-col items-center space-y-4 text-center"
-                >
-                    <Image
-                        src={`${socialLinks.github.url}.png`}
-                        alt="Easteregg"
-                        width={300}
-                        height={300}
-                    />
-                    <IonParagraph size={"medium"}>
-                        {pages.easteregg.notes}
-                    </IonParagraph>
-                </div>
-            </IonLayout>
-        </>
+                <Image
+                    src={`${socialLinks.github.url}.png`}
+                    alt="Easteregg"
+                    width={300}
+                    height={300}
+                />
+                <IonParagraph size={"medium"}>
+                    {pages.easteregg.notes}
+                </IonParagraph>
+            </div>
+        </IonLayout>
     )
 }
