@@ -11,8 +11,8 @@
         "title": "Contato",
         "url": "/contact"
     },
-    "easter-egg": {
+    "easteregg": {
         "title": "Easter Egg",
-        "url": "/tudo-certo-jovem"
+        "url": "/easteregg"
     }
 }

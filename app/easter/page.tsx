@@ -13,7 +13,7 @@ import { IonDialog } from "../shared/components/ion-dialog/ion-dialog";
 import IonLayout from "../shared/components/ion-layout/ion-layout";
 import { IonParagraph } from "../shared/components/typo/ion-paragraph/ion-paragraph";
 
-export default function EasterEgg() {
+export default function Easter() {
     const [recycle, setRecycle] = useState(true);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ export default function EasterEgg() {
                             href: routes.home.url,
                             nested: [
                                 {
-                                    title: routes["easter-egg"].title,
+                                    title: routes.easteregg.title,
                                 },
                             ],
                         },
@@ -62,8 +62,8 @@ export default function EasterEgg() {
                 />
                 <IonDialog
                     triggerLabel={"Não clique aqui..."}
-                    title={pages["easter-egg"].title}
-                    description={pages["easter-egg"].description}
+                    title={pages.easteregg.title}
+                    description={pages.easteregg.description}
                 >
                 </IonDialog>
                 <div
@@ -71,12 +71,12 @@ export default function EasterEgg() {
                 >
                     <Image
                         src={`${socialLinks.github.url}.png`}
-                        alt="Easter Egg"
+                        alt="Easteregg"
                         width={300}
                         height={300}
                     />
                     <IonParagraph size={"medium"}>
-                        {pages["easter-egg"].notes}
+                        {pages.easteregg.notes}
                     </IonParagraph>
                 </div>
             </IonLayout>
